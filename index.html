@@ -65,6 +65,12 @@
     .btn-primary:hover { background: var(--teal-dark); }
     .btn-secondary { border-color: var(--line); color: var(--ink); background: white; }
     .btn-secondary:hover { border-color: #b7d7d2; }
+    .btn-google { width: 100%; border-color: var(--line); color: var(--ink); background: white; }
+    .btn-google:hover { border-color: #b7d7d2; background: #fbfcfc; }
+    .google-mark { font-weight: 850; font-size: 17px; background: conic-gradient(from -45deg, #4285f4 0deg 90deg, #34a853 90deg 180deg, #fbbc05 180deg 270deg, #ea4335 270deg); color: transparent; background-clip: text; -webkit-background-clip: text; }
+    .auth-alternatives { display: grid; gap: 9px; }
+    .auth-notice { margin: 12px 0 0; padding: 11px 12px; border-radius: 9px; color: #235c54; background: #e8f5f2; font-size: 11px; line-height: 1.55; }
+    .auth-notice code { padding: 2px 5px; border-radius: 4px; color: var(--navy); background: white; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
     .btn-light { color: var(--navy); background: var(--lime); }
     .auth-separator { display: flex; align-items: center; gap: 12px; margin: 19px 0; color: #9aa8ad; font-size: 11px; }
     .auth-separator::before, .auth-separator::after { height: 1px; flex: 1; background: var(--line); content: ""; }
@@ -157,6 +163,29 @@
     .status-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 9px; border-radius: 99px; color: #267452; background: #e7f6ec; font-size: 10px; font-weight: 750; white-space: nowrap; }
     .status-pill.pending { color: #a36d14; background: #fff3d9; }
     .lower-grid { grid-template-columns: minmax(0, 1.15fr) minmax(290px, .85fr); margin-top: 18px; }
+    .promo-banner { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 22px; margin-top: 18px; padding: 21px 24px; border-radius: 15px; color: white; background: linear-gradient(115deg, #0d6764, #153f4b 78%); }
+    .promo-banner::after { position: absolute; width: 210px; height: 210px; top: -115px; right: 15%; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; box-shadow: 0 0 0 25px rgba(255,255,255,.025), 0 0 0 50px rgba(255,255,255,.025); content: ""; pointer-events: none; }
+    .promo-copy, .promo-action { position: relative; z-index: 1; }
+    .promo-badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 99px; color: var(--navy); background: var(--lime); font-size: 9px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
+    .promo-copy h2 { margin: 10px 0 5px; font-size: 19px; letter-spacing: -.035em; }
+    .promo-copy p { margin: 0; color: #d1e1df; font-size: 11px; line-height: 1.6; }
+    .promo-prices { display: flex; align-items: baseline; gap: 9px; margin-top: 10px; }
+    .promo-prices strong { color: var(--lime); font-size: 19px; }
+    .promo-prices del { color: #bdcfce; font-size: 11px; }
+    .promo-action { display: grid; justify-items: end; gap: 8px; }
+    .promo-action .btn { white-space: nowrap; }
+    .promo-action small { color: #c0d2d1; font-size: 9px; }
+    .credits-card { max-width: 760px; }
+    .credits-kicker { margin: 0 0 6px; color: var(--teal); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .credits-title { margin: 0; font-size: 23px; letter-spacing: -.045em; }
+    .credits-subtitle { margin: 9px 0 21px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .credits-people { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; padding: 0; list-style: none; }
+    .credits-people li { display: flex; align-items: center; gap: 9px; padding: 11px; border: 1px solid var(--line); border-radius: 9px; font-size: 11px; font-weight: 650; }
+    .credits-people .avatar { width: 30px; height: 30px; flex: 0 0 auto; font-size: 9px; }
+    .credits-program { margin-top: 17px; padding: 14px; border-radius: 10px; background: #eff7f5; }
+    .credits-program strong, .credits-program span { display: block; }
+    .credits-program strong { margin-bottom: 6px; font-size: 11px; }
+    .credits-program span { color: var(--muted); font-size: 10px; line-height: 1.6; }
     .service-list { display: grid; }
     .service-row { display: flex; align-items: center; gap: 12px; padding: 13px 0; border-top: 1px solid #edf1f2; }
     .service-row:first-child { padding-top: 3px; border-top: 0; }
@@ -318,6 +347,10 @@
       .speed-metric { align-items: flex-start; flex-direction: column; gap: 5px; }
       .chat-launcher { right: 16px; bottom: 16px; }
       .chat-panel { right: 16px; bottom: 79px; }
+      .promo-banner { grid-template-columns: 1fr; }
+      .promo-action { justify-items: stretch; }
+      .promo-action small { text-align: center; }
+      .credits-people { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
@@ -358,10 +391,17 @@
           <div class="field hidden" id="nameField"><label for="fullName">Nombre completo</label><input id="fullName" name="name" autocomplete="name" placeholder="¿Cómo te llamas?"></div>
           <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com" required></div>
           <div class="field" id="passwordField"><label for="password">Contraseña</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" minlength="4" required></div>
+          <div class="field hidden" id="tokenField"><label for="emailToken">Código enviado a tu correo</label><input id="emailToken" name="emailToken" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="Ingresa el código de 6 dígitos"></div>
+          <p class="auth-notice hidden" id="authNotice" role="status"></p>
           <div class="form-row" id="loginOptions"><label class="check"><input type="checkbox" name="remember"> Recuérdame</label><button type="button" class="text-button" data-auth-mode="recover">¿Olvidaste tu contraseña?</button></div>
           <button class="btn btn-primary" type="submit" id="authSubmit">Ingresar a mi cuenta <svg class="icon"><use href="#i-arrow"/></svg></button>
         </form>
-        <div id="demoOption">
+        <div id="authAlternatives">
+          <div class="auth-separator">o continúa con</div>
+          <div class="auth-alternatives">
+            <button class="btn btn-google" type="button" id="googleLogin"><span class="google-mark" aria-hidden="true">G</span> Continuar con Google <span style="font-size:10px;color:var(--muted)">(demo)</span></button>
+            <button class="btn btn-secondary" type="button" id="emailTokenLogin"><svg class="icon"><use href="#i-mail"/></svg> Ingresar con código al correo</button>
+          </div>
           <div class="auth-separator">o también puedes</div>
           <button class="btn btn-secondary" type="button" id="demoLogin" style="width:100%">Explorar cuenta demo</button>
         </div>
@@ -395,6 +435,7 @@
         <button class="nav-item" data-page="wifi"><svg class="icon"><use href="#i-wifi"/></svg>Mi Wi-Fi</button>
         <button class="nav-item" data-page="plans"><svg class="icon"><use href="#i-grid"/></svg>Planes</button>
         <button class="nav-item" data-page="tools"><svg class="icon"><use href="#i-spark"/></svg>Herramientas</button>
+        <button class="nav-item" data-page="credits"><svg class="icon"><use href="#i-help"/></svg>Créditos</button>
       </nav>
       <div class="sidebar-spacer"></div>
       <div class="support-card"><strong>¿Necesitas ayuda?</strong><p>Estamos para ayudarte cuando lo necesites.</p><button id="supportLink">Contactar soporte <span aria-hidden="true">↗</span></button></div>
@@ -437,10 +478,15 @@
         email: "maria@email.com",
         plan: "Conecta+",
         speed: 600,
+        promoCycles: 0,
+        paidBillAmount: null,
         wifiName: "HOGAR_RODRIGUEZ",
         wifiPassword: "Telco2025!",
         billPaid: false,
-        page: "overview"
+        page: "overview",
+        emailToken: "",
+        emailTokenAddress: "",
+        emailTokenSent: false
       };
       const authView = document.getElementById("authView");
       const appView = document.getElementById("appView");
@@ -453,6 +499,7 @@
       const money = value => "$" + new Intl.NumberFormat("es-CO").format(value);
       const icon = (name, cls = "icon") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${name}"></use></svg>`;
       const currentPlan = () => plans.find(plan => plan.name === state.plan) || plans[1];
+      const monthlyCharge = () => state.promoCycles > 0 ? Math.round(currentPlan().price * .8) : currentPlan().price;
       const displayName = () => state.name.trim().split(/\s+/)[0] || "Cliente";
       const safe = value => String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 
@@ -466,23 +513,36 @@
         authMode = mode;
         const register = mode === "register";
         const recover = mode === "recover";
+        const token = mode === "token";
+        if (!token) {
+          state.emailToken = "";
+          state.emailTokenAddress = "";
+          state.emailTokenSent = false;
+        }
         document.getElementById("authEyebrow").textContent = register ? "Únete a TelcoAndina" : recover ? "Recupera tu acceso" : "Mi cuenta TelcoAndina";
         document.getElementById("authTitle").innerHTML = register ? "Empieza a disfrutar<br>de estar conectado." : recover ? "Recuperemos<br>tu acceso." : "Tu conexión,<br>en tus manos.";
         document.getElementById("authDescription").textContent = register
           ? "Crea tu cuenta para gestionar tus servicios TelcoAndina de forma fácil y segura."
           : recover ? "Ingresa el correo asociado a tu cuenta y te enviaremos los pasos para crear una nueva contraseña."
+          : token ? "Te enviaremos un código de un solo uso para que ingreses sin contraseña."
           : "Ingresa a tu cuenta para administrar tus servicios, revisar tus pagos y mucho más.";
         document.getElementById("nameField").classList.toggle("hidden", !register);
-        document.getElementById("passwordField").classList.toggle("hidden", recover);
-        document.getElementById("password").required = !recover;
+        document.getElementById("passwordField").classList.toggle("hidden", recover || token);
+        document.getElementById("password").required = !recover && !token;
+        document.getElementById("tokenField").classList.toggle("hidden", !token || !state.emailTokenSent);
+        document.getElementById("emailToken").required = token && state.emailTokenSent;
+        document.getElementById("email").readOnly = token && state.emailTokenSent;
+        document.getElementById("authNotice").classList.toggle("hidden", !token || !state.emailTokenSent);
         document.getElementById("fullName").required = register;
-        document.getElementById("loginOptions").classList.toggle("hidden", register || recover);
-        document.getElementById("demoOption").classList.toggle("hidden", register || recover);
-        document.getElementById("authSubmit").innerHTML = register ? `Crear mi cuenta ${icon("arrow")}` : recover ? `Enviar instrucciones ${icon("arrow")}` : `Ingresar a mi cuenta ${icon("arrow")}`;
+        document.getElementById("loginOptions").classList.toggle("hidden", register || recover || token);
+        document.getElementById("authAlternatives").classList.toggle("hidden", recover || token);
+        document.getElementById("authSubmit").innerHTML = register ? `Crear mi cuenta ${icon("arrow")}` : recover ? `Enviar instrucciones ${icon("arrow")}` : token && state.emailTokenSent ? `Verificar código ${icon("arrow")}` : token ? `Enviar código demo ${icon("arrow")}` : `Ingresar a mi cuenta ${icon("arrow")}`;
         document.getElementById("authSwitch").innerHTML = register
           ? `¿Ya tienes una cuenta? <button type="button" class="text-button" data-auth-mode="login">Inicia sesión</button>`
           : recover
             ? `¿Recordaste tu contraseña? <button type="button" class="text-button" data-auth-mode="login">Volver a ingresar</button>`
+            : token
+              ? `¿Prefieres tu contraseña? <button type="button" class="text-button" data-auth-mode="login">Volver a ingresar</button>`
             : `¿Aún no tienes una cuenta? <button type="button" class="text-button" data-auth-mode="register">Regístrate aquí</button>`;
       }
       function enterApp(name, email) {
@@ -501,7 +561,25 @@
         const data = new FormData(authForm);
         const email = String(data.get("email") || "").trim();
         if (authMode === "recover") {
-          toast(`Si existe una cuenta para ${email}, recibirás instrucciones en tu correo.`);
+          toast(`Demo: se simularía el envío de instrucciones a ${email}.`);
+          return;
+        }
+        if (authMode === "token") {
+          if (!state.emailTokenSent) {
+            state.emailToken = String(Math.floor(100000 + Math.random() * 900000));
+            state.emailTokenAddress = email;
+            state.emailTokenSent = true;
+            setAuthMode("token");
+            document.getElementById("authNotice").innerHTML = `Simulación: este código no se envía por correo. Código de prueba: <code>${state.emailToken}</code>. En producción, llegaría a ${safe(email)}.`;
+            document.getElementById("emailToken").focus();
+            return;
+          }
+          const tokenValue = String(data.get("emailToken") || "").trim();
+          if (email !== state.emailTokenAddress || tokenValue !== state.emailToken) {
+            toast("El código no coincide. Revisa el código de prueba e inténtalo de nuevo.");
+            return;
+          }
+          enterApp(email === "maria@email.com" ? "María Camila Rodríguez" : email.split("@")[0].replace(/[._-]/g, " "), email);
           return;
         }
         if (authMode === "register") {
@@ -516,6 +594,8 @@
         enterApp(email === "maria@email.com" ? "María Camila Rodríguez" : email.split("@")[0].replace(/[._-]/g, " "), email);
       });
       document.getElementById("demoLogin").addEventListener("click", () => enterApp());
+      document.getElementById("emailTokenLogin").addEventListener("click", () => setAuthMode("token"));
+      document.getElementById("googleLogin").addEventListener("click", openGoogleDemo);
       document.addEventListener("click", event => {
         const modeButton = event.target.closest("[data-auth-mode]");
         if (modeButton) { setAuthMode(modeButton.dataset.authMode); return; }
@@ -553,10 +633,11 @@
       }
       function billCard() {
         const paid = state.billPaid;
+        const amount = paid && state.paidBillAmount !== null ? state.paidBillAmount : monthlyCharge();
         return `<article class="card bill-card">
           <div class="card-header"><h2 class="card-title">Tu próxima factura</h2><span class="status-pill ${paid ? "" : "pending"}">${icon(paid ? "check" : "clock")} ${paid ? "Pagada" : "Pendiente"}</span></div>
           <span class="bill-label">${paid ? "Total pagado" : "Total a pagar"}</span>
-          <div class="bill-amount">${money(34900)}</div>
+          <div class="bill-amount">${money(amount)}</div>
           <div class="bill-due">${paid ? "Pago registrado el día de hoy" : `Vence el <strong>15 de octubre, 2025</strong>`}</div>
           <button class="btn ${paid ? "btn-secondary" : "btn-primary"}" data-action="${paid ? "history" : "pay"}">${paid ? "Ver historial de pagos" : "Pagar factura"} ${icon("arrow")}</button>
           <div class="bill-foot"><span>Factura #TA-2025-0842</span><span>Internet hogar</span></div>
@@ -580,6 +661,10 @@
             </article>
             ${billCard()}
           </div>
+          ${state.plan === "Ultra" ? "" : `<article class="promo-banner">
+            <div class="promo-copy"><span class="promo-badge">${icon("spark")} Oferta para ti · 20% menos</span><h2>Más velocidad para todo lo que disfrutas</h2><p>Mejora a Ultra con 900 Mbps y aprovecha el descuento en tus primeras 3 facturas.</p><div class="promo-prices"><strong>${money(Math.round(plans[2].price * .8))}<small style="font-size:10px;font-weight:600"> / mes</small></strong><del>${money(plans[2].price)} / mes</del></div></div>
+            <div class="promo-action"><button class="btn btn-light" data-action="buy-upgrade">Activar oferta en 1 clic ${icon("arrow")}</button><small>Demostración · Sin cargos reales</small></div>
+          </article>`}
           <div class="grid lower-grid">
             <article class="card"><div class="card-header"><h2 class="card-title">Mis servicios</h2><button class="card-link" data-page="services">Ver todos ${icon("arrow")}</button></div><div class="service-list">
               ${serviceRow("wifi", "Internet fibra óptica", `${state.speed} Mbps · ${plan.name}`)}
@@ -587,8 +672,8 @@
               ${serviceRow("phone", "Voz hogar", "Llamadas ilimitadas nacionales")}
             </div></article>
             <article class="card"><div class="card-header"><h2 class="card-title">Actividad reciente</h2><button class="card-link" data-page="payments">Ver movimientos ${icon("arrow")}</button></div><div class="activity">
-              ${state.billPaid ? activityRow("check", "Pago recibido", "Factura de octubre · Hoy", `-${money(34900)}`) : activityRow("clock", "Factura disponible", "Factura de octubre · 1 oct", money(34900))}
-              ${activityRow("box", `Plan ${safe(plan.name)}`, "Servicio de internet · 1 oct", money(plan.price))}
+              ${state.billPaid ? activityRow("check", "Pago recibido", "Factura de octubre · Hoy", `-${money(state.paidBillAmount ?? monthlyCharge())}`) : activityRow("clock", "Factura disponible", "Factura de octubre · 1 oct", money(monthlyCharge()))}
+              ${activityRow("box", `Plan ${safe(plan.name)}`, "Servicio de internet · 1 oct", money(monthlyCharge()))}
             </div></article>
           </div>`;
       }
@@ -621,7 +706,7 @@
             </article>
           </div>
           <article class="card" style="margin-top:18px"><div class="card-header"><h2 class="card-title">Historial de facturas</h2><span class="muted" style="font-size:11px">Últimos movimientos</span></div><div class="payment-list">
-            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("card")}</span><div class="payment-meta"><strong>Factura de octubre 2025</strong><span>TA-2025-0842 · 1 oct 2025</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill ${state.billPaid ? "" : "pending"}">${state.billPaid ? "Pagada" : "Pendiente"}</span></div></div>
+            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("card")}</span><div class="payment-meta"><strong>Factura de octubre 2025</strong><span>TA-2025-0842 · 1 oct 2025</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(state.billPaid && state.paidBillAmount !== null ? state.paidBillAmount : monthlyCharge())}</strong><span class="status-pill ${state.billPaid ? "" : "pending"}">${state.billPaid ? "Pagada" : "Pendiente"}</span></div></div>
             <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de septiembre 2025</strong><span>TA-2025-0779 · 1 sep 2025</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill">Pagada</span></div></div>
             <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de agosto 2025</strong><span>TA-2025-0691 · 1 ago 2025</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill">Pagada</span></div></div>
           </div></article>`;
@@ -645,8 +730,9 @@
       function renderPlans() {
         const cards = plans.map((plan, index) => {
           const isCurrent = state.plan === plan.name;
+          const displayedPrice = isCurrent ? monthlyCharge() : plan.price;
           return `<article class="plan-card ${isCurrent ? "current" : ""}">${isCurrent ? `<span class="plan-tag">Tu plan actual</span>` : `<span class="plan-tag">${plan.tag}</span>`}
-            <h3>${plan.name}</h3><div class="plan-speed">${plan.speed} <small>Mbps</small></div><div class="plan-price">${money(plan.price)} <small>/ mes</small></div>
+            <h3>${plan.name}</h3><div class="plan-speed">${plan.speed} <small>Mbps</small></div><div class="plan-price">${money(displayedPrice)} <small>/ mes</small></div>${isCurrent && state.promoCycles ? `<p class="field-help">Oferta activa: ${state.promoCycles} factura${state.promoCycles === 1 ? "" : "s"} con 20% de descuento.</p>` : ""}
             <ul class="plan-features">${plan.features.map(feature => `<li>${icon("check")}${feature}</li>`).join("")}</ul>
             <button class="btn ${isCurrent ? "btn-secondary" : "btn-primary"}" ${isCurrent ? "disabled" : `data-plan="${index}"`}>${isCurrent ? "Plan contratado" : "Elegir este plan"}</button>
           </article>`;
@@ -677,13 +763,24 @@
             </article>
           </div>`;
       }
+      function renderCredits() {
+        const people = ["Carmen Rosa Forero", "Freddy Belmonte", "Ferney Carvajal", "Edgar L. Hernandez", "Alexander Lisker", "Jose E. Montero", "Miguel A. Villalba"];
+        return `${heading("Quiénes somos", "Créditos del proyecto", "Conoce al grupo que diseñó y desarrolló esta demostración.")}
+          <article class="card credits-card">
+            <p class="credits-kicker">Arquitectura</p><h2 class="credits-title">ETB-JUNIOR</h2>
+            <p class="credits-subtitle">Grupo de desarrollo del portal de autoservicio TelcoAndina.</p>
+            <div class="card-header"><h3 class="card-title">Ingenieros</h3><span class="status-pill">${people.length} integrantes</span></div>
+            <ul class="credits-people">${people.map(name => `<li><span class="avatar">${safe(name.split(/\s+/).map(part => part[0]).slice(0, 2).join("").toUpperCase())}</span>${safe(name)}</li>`).join("")}</ul>
+            <div class="credits-program"><strong>Formación</strong><span>Diplomado Cloud Computing, Arquitecturas Híbridas y Ciberseguridad Zero Trust - ETB - Bogotá Col. 2 oct 2026</span></div>
+          </article>`;
+      }
       function renderPage(page) {
         if (page !== "tools" && speedInterval) {
           clearInterval(speedInterval);
           speedInterval = undefined;
         }
         state.page = page;
-        const pages = { overview: ["Resumen", renderOverview], services: ["Mis servicios", renderServices], payments: ["Pagos y facturas", renderPayments], wifi: ["Mi Wi-Fi", renderWifi], plans: ["Planes", renderPlans], tools: ["Herramientas", renderTools] };
+        const pages = { overview: ["Resumen", renderOverview], services: ["Mis servicios", renderServices], payments: ["Pagos y facturas", renderPayments], wifi: ["Mi Wi-Fi", renderWifi], plans: ["Planes", renderPlans], tools: ["Herramientas", renderTools], credits: ["Créditos", renderCredits] };
         const selected = pages[page] || pages.overview;
         document.getElementById("breadcrumbPage").textContent = selected[0];
         document.querySelectorAll(".nav-item").forEach(item => item.classList.toggle("active", item.dataset.page === page));
@@ -697,6 +794,14 @@
         if (action === "wifi") { renderPage("wifi"); return; }
         if (action === "pay") { openPaymentModal(); return; }
         if (action === "history") { renderPage("payments"); return; }
+        if (action === "buy-upgrade") {
+          state.plan = "Ultra";
+          state.speed = 900;
+          state.promoCycles = 3;
+          renderPage("overview");
+          toast("¡Oferta activada! Ultra 900 Mbps tiene 20% de descuento en tus próximas 3 facturas. Demo sin cargos reales.");
+          return;
+        }
         if (action === "speed-test") { startSpeedTest(); return; }
         if (action === "support") { openSupport(); return; }
         if (action === "download") { toast("Tu estado de cuenta está listo para descargar."); return; }
@@ -798,18 +903,34 @@
         document.getElementById("modalRoot").innerHTML = `<div class="modal-backdrop" data-close-modal><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><div><span class="eyebrow">Mi cuenta TelcoAndina</span><h2 id="modalTitle">${title}</h2><p>${description}</p></div><button class="modal-close" type="button" data-close-modal aria-label="Cerrar">${icon("check")}</button></div>${content}${actions}</section></div>`;
       }
       function closeModal() { document.getElementById("modalRoot").innerHTML = ""; }
+      function openGoogleDemo() {
+        modal("Continuar con Google", "Flujo de autenticación representativo para la demostración.",
+          `<div class="wifi-network"><span class="avatar" style="width:42px;height:42px;background:white;color:#4285f4;font-size:17px">G</span><div><strong>María Camila Rodríguez</strong><span>maria@gmail.com · cuenta de demostración</span></div></div>
+           <p class="demo-note">Esta vista no se conecta con Google ni comparte datos. Para producción se requiere configurar OAuth con las credenciales y redirecciones del proveedor.</p>`,
+          `<div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" style="width:auto" id="confirmGoogle">Continuar como María</button></div>`);
+        document.getElementById("confirmGoogle").addEventListener("click", () => {
+          closeModal();
+          enterApp("María Camila Rodríguez", "maria@gmail.com");
+          toast("Acceso de Google simulado para la cuenta demo.");
+        });
+      }
       function openPaymentModal() {
+        const amount = monthlyCharge();
         modal("Confirma tu pago", "Revisa los datos de tu factura antes de continuar.",
-          `<div class="modal-summary"><span>Factura TA-2025-0842<br><span class="muted">Internet hogar · vence 15 oct</span></span><strong>${money(34900)}</strong></div>
+          `<div class="modal-summary"><span>Factura TA-2025-0842<br><span class="muted">Internet hogar · vence 15 oct</span></span><strong>${money(amount)}</strong></div>
            <div class="field"><label for="paymentMethod">Pagar con</label><select id="paymentMethod"><option>Visa terminada en 4242</option><option>Agregar otro método de pago</option></select></div>
            <div class="field"><label class="check"><input id="termsPayment" type="checkbox" checked> Acepto el procesamiento de este pago</label></div>`,
-          `<div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" style="width:auto" id="confirmPayment">Pagar ${money(34900)}</button></div>`);
+          `<div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" style="width:auto" id="confirmPayment">Pagar ${money(amount)}</button></div>`);
         document.getElementById("confirmPayment").addEventListener("click", () => {
           if (!document.getElementById("termsPayment").checked) { toast("Acepta el procesamiento para continuar."); return; }
           state.billPaid = true;
+          state.paidBillAmount = amount;
+          if (state.promoCycles > 0) state.promoCycles -= 1;
           closeModal();
           renderPage(state.page);
-          toast("¡Pago realizado! Tu factura quedó al día.");
+          toast(state.promoCycles === 0 && state.paidBillAmount !== currentPlan().price
+            ? "¡Pago realizado! Tu descuento promocional terminó; la próxima factura tendrá tarifa regular."
+            : "¡Pago realizado! Tu factura quedó al día.");
         });
       }
       function openPlanModal(index) {
@@ -824,6 +945,7 @@
         document.getElementById("confirmPlan").addEventListener("click", () => {
           state.plan = plan.name;
           state.speed = plan.speed;
+          state.promoCycles = 0;
           closeModal();
           renderPage("overview");
           toast(`¡Listo! Ahora tienes el plan ${plan.name}.`);
