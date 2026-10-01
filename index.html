@@ -95,6 +95,27 @@
     .art-card strong { font-size: 13px; }
     .art-card small { margin-top: 4px; color: #c3d3d5; font-size: 11px; }
 
+    @media (min-width: 741px) and (max-height: 850px) {
+      .auth-side { padding-top: 10px; padding-bottom: 6px; }
+      .auth-main { padding: 0; transform: translateY(-14px); }
+      .auth-main h1 { margin: 8px 0 5px; font-size: clamp(36px, 3.5vw, 42px); line-height: 1; }
+      .auth-main > p { margin-bottom: 8px; font-size: 16px; line-height: 1.4; }
+      .auth-main .field { gap: 4px; margin: 6px 0; }
+      .auth-main .field label { font-size: 14px; }
+      .auth-main .field input, .auth-main .field select { min-height: 46px; font-size: 16px; }
+      .auth-main .form-row { margin: 4px 0 6px; font-size: 14px; }
+      .auth-main .btn { min-height: 46px; font-size: 15px; }
+      .auth-main .auth-separator { margin: 5px 0; font-size: 13px; }
+      .auth-main .auth-alternatives { gap: 6px; }
+      .auth-main .auth-switch { margin-top: 5px; font-size: 14px; }
+      .auth-footer { font-size: 12px; }
+      .auth-art { min-height: 0; padding: clamp(24px, 3.5vh, 48px); }
+      .art-copy { margin-bottom: 48px; }
+      .art-copy h2 { margin: 10px 0; font-size: clamp(38px, 4.9vw, 62px); }
+      .art-copy p { font-size: 16px; line-height: 1.45; }
+      .art-card { padding: 12px; }
+    }
+
     /* Portal */
     .app-shell { min-height: 100vh; display: grid; grid-template-columns: 248px minmax(0, 1fr); }
     .sidebar { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; padding: 26px 17px 17px; border-right: 1px solid var(--line); background: #fff; }
@@ -304,8 +325,17 @@
     }
     @media (max-width: 740px) {
       .auth-shell { grid-template-columns: 1fr; }
-      .auth-side { min-height: 100vh; padding: 25px clamp(22px, 7vw, 48px); }
-      .auth-main { padding: 52px 0 35px; }
+      .auth-side { min-height: 100vh; min-height: 100svh; padding: 16px clamp(22px, 7vw, 48px) 10px; }
+      .auth-main { padding: 18px 0 12px; }
+      .auth-main h1 { font-size: 33px; }
+      .auth-main > p { margin-bottom: 13px; font-size: 15px; line-height: 1.5; }
+      .auth-main .field { gap: 5px; margin: 9px 0; }
+      .auth-main .field label { font-size: 13px; }
+      .auth-main .field input, .auth-main .field select { min-height: 46px; }
+      .auth-main .form-row { margin: 6px 0 10px; font-size: 13px; }
+      .auth-main .auth-separator { margin: 9px 0; font-size: 12px; }
+      .auth-main .auth-switch { margin-top: 10px; font-size: 13px; }
+      .auth-main .btn { min-height: 46px; }
       .auth-art { display: none; }
       .auth-footer { padding-top: 10px; }
       .app-shell { display: block; }
@@ -326,6 +356,30 @@
       .bill-card { min-height: 210px; }
       .settings-grid { grid-template-columns: 1fr; }
       .tools-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 740px) and (max-height: 760px) {
+      .auth-side { padding-top: 10px; padding-bottom: 4px; }
+      .auth-main { padding: 4px 0; }
+      .auth-main h1 { margin: 7px 0 5px; font-size: 31px; }
+      .auth-main > p { margin-bottom: 8px; font-size: 14px; }
+      .auth-main .field { margin: 6px 0; }
+      .auth-main .field input, .auth-main .field select { min-height: 44px; }
+      .auth-main .form-row { margin: 4px 0 6px; }
+      .auth-main .auth-separator { margin: 5px 0; }
+      .auth-main .auth-switch { margin-top: 6px; }
+      .auth-footer { padding-top: 4px; }
+    }
+    @media (max-width: 740px) and (max-height: 680px) {
+      .auth-side { padding-top: 6px; padding-bottom: 2px; }
+      .auth-main { padding: 0; }
+      .auth-main h1 { margin: 4px 0 3px; font-size: 29px; }
+      .auth-main > p { margin-bottom: 5px; }
+      .auth-main .field { margin: 4px 0; }
+      .auth-main .field input, .auth-main .field select { min-height: 42px; }
+      .auth-main .form-row { margin: 2px 0 4px; }
+      .auth-main .auth-separator { margin: 3px 0; }
+      .auth-main .auth-switch { margin-top: 3px; }
+      .auth-footer { padding-top: 2px; }
     }
     @media (max-width: 520px) {
       .page { padding-right: 16px; padding-left: 16px; }
@@ -387,15 +441,6 @@
         <span class="eyebrow" id="authEyebrow">Mi cuenta TelcoAndina</span>
         <h1 id="authTitle">Tu conexión,<br>en tus manos.</h1>
         <p id="authDescription">Ingresa a tu cuenta para administrar tus servicios, revisar tus pagos y mucho más.</p>
-        <form id="authForm">
-          <div class="field hidden" id="nameField"><label for="fullName">Nombre completo</label><input id="fullName" name="name" autocomplete="name" placeholder="¿Cómo te llamas?"></div>
-          <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com" required></div>
-          <div class="field" id="passwordField"><label for="password">Contraseña</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" minlength="4" required></div>
-          <div class="field hidden" id="tokenField"><label for="emailToken">Código enviado a tu correo</label><input id="emailToken" name="emailToken" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="Ingresa el código de 6 dígitos"></div>
-          <p class="auth-notice hidden" id="authNotice" role="status"></p>
-          <div class="form-row" id="loginOptions"><label class="check"><input type="checkbox" name="remember"> Recuérdame</label><button type="button" class="text-button" data-auth-mode="recover">¿Olvidaste tu contraseña?</button></div>
-          <button class="btn btn-primary" type="submit" id="authSubmit">Ingresar a mi cuenta <svg class="icon"><use href="#i-arrow"/></svg></button>
-        </form>
         <div id="authAlternatives">
           <div class="auth-separator">o continúa con</div>
           <div class="auth-alternatives">
@@ -405,9 +450,18 @@
           <div class="auth-separator">o también puedes</div>
           <button class="btn btn-secondary" type="button" id="demoLogin" style="width:100%">Explorar cuenta demo</button>
         </div>
+        <form id="authForm">
+          <div class="field hidden" id="nameField"><label for="fullName">Nombre completo</label><input id="fullName" name="name" autocomplete="name" placeholder="¿Cómo te llamas?"></div>
+          <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com" required></div>
+          <div class="field" id="passwordField"><label for="password">Contraseña</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" minlength="4" required></div>
+          <div class="field hidden" id="tokenField"><label for="emailToken">Código enviado a tu correo</label><input id="emailToken" name="emailToken" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="Ingresa el código de 6 dígitos"></div>
+          <p class="auth-notice hidden" id="authNotice" role="status"></p>
+          <div class="form-row" id="loginOptions"><label class="check"><input type="checkbox" name="remember"> Recuérdame</label><button type="button" class="text-button" data-auth-mode="recover">¿Olvidaste tu contraseña?</button></div>
+          <button class="btn btn-primary" type="submit" id="authSubmit">Ingresar a mi cuenta <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </form>
         <p class="auth-switch" id="authSwitch">¿Aún no tienes una cuenta? <button type="button" class="text-button" data-auth-mode="register">Regístrate aquí</button></p>
       </div>
-      <div class="auth-footer">© 2025 TelcoAndina Telecomunicaciones · <a href="mailto:privacidad@telcoandina.example" style="color:inherit">Privacidad</a></div>
+      <div class="auth-footer">© 2026 TelcoAndina Telecomunicaciones · <a href="mailto:privacidad@telcoandina.example" style="color:inherit">Privacidad</a></div>
     </section>
     <aside class="auth-art" aria-label="Conectividad TelcoAndina">
       <div class="art-glow"></div>
@@ -638,9 +692,9 @@
           <div class="card-header"><h2 class="card-title">Tu próxima factura</h2><span class="status-pill ${paid ? "" : "pending"}">${icon(paid ? "check" : "clock")} ${paid ? "Pagada" : "Pendiente"}</span></div>
           <span class="bill-label">${paid ? "Total pagado" : "Total a pagar"}</span>
           <div class="bill-amount">${money(amount)}</div>
-          <div class="bill-due">${paid ? "Pago registrado el día de hoy" : `Vence el <strong>15 de octubre, 2025</strong>`}</div>
+          <div class="bill-due">${paid ? "Pago registrado el día de hoy" : `Vence el <strong>15 de octubre, 2026</strong>`}</div>
           <button class="btn ${paid ? "btn-secondary" : "btn-primary"}" data-action="${paid ? "history" : "pay"}">${paid ? "Ver historial de pagos" : "Pagar factura"} ${icon("arrow")}</button>
-          <div class="bill-foot"><span>Factura #TA-2025-0842</span><span>Internet hogar</span></div>
+          <div class="bill-foot"><span>Factura #TA-2026-0842</span><span>Internet hogar</span></div>
         </article>`;
       }
       function serviceRow(type, title, detail) {
@@ -706,9 +760,9 @@
             </article>
           </div>
           <article class="card" style="margin-top:18px"><div class="card-header"><h2 class="card-title">Historial de facturas</h2><span class="muted" style="font-size:11px">Últimos movimientos</span></div><div class="payment-list">
-            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("card")}</span><div class="payment-meta"><strong>Factura de octubre 2025</strong><span>TA-2025-0842 · 1 oct 2025</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(state.billPaid && state.paidBillAmount !== null ? state.paidBillAmount : monthlyCharge())}</strong><span class="status-pill ${state.billPaid ? "" : "pending"}">${state.billPaid ? "Pagada" : "Pendiente"}</span></div></div>
-            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de septiembre 2025</strong><span>TA-2025-0779 · 1 sep 2025</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill">Pagada</span></div></div>
-            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de agosto 2025</strong><span>TA-2025-0691 · 1 ago 2025</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill">Pagada</span></div></div>
+            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("card")}</span><div class="payment-meta"><strong>Factura de octubre 2026</strong><span>TA-2026-0842 · 1 oct 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(state.billPaid && state.paidBillAmount !== null ? state.paidBillAmount : monthlyCharge())}</strong><span class="status-pill ${state.billPaid ? "" : "pending"}">${state.billPaid ? "Pagada" : "Pendiente"}</span></div></div>
+            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de septiembre 2026</strong><span>TA-2026-0779 · 1 sep 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill">Pagada</span></div></div>
+            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de agosto 2026</strong><span>TA-2026-0691 · 1 ago 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill">Pagada</span></div></div>
           </div></article>`;
       }
       function renderWifi() {
@@ -917,7 +971,7 @@
       function openPaymentModal() {
         const amount = monthlyCharge();
         modal("Confirma tu pago", "Revisa los datos de tu factura antes de continuar.",
-          `<div class="modal-summary"><span>Factura TA-2025-0842<br><span class="muted">Internet hogar · vence 15 oct</span></span><strong>${money(amount)}</strong></div>
+          `<div class="modal-summary"><span>Factura TA-2026-0842<br><span class="muted">Internet hogar · vence 15 oct</span></span><strong>${money(amount)}</strong></div>
            <div class="field"><label for="paymentMethod">Pagar con</label><select id="paymentMethod"><option>Visa terminada en 4242</option><option>Agregar otro método de pago</option></select></div>
            <div class="field"><label class="check"><input id="termsPayment" type="checkbox" checked> Acepto el procesamiento de este pago</label></div>`,
           `<div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" style="width:auto" id="confirmPayment">Pagar ${money(amount)}</button></div>`);
