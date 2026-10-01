@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f7f8">
-  <meta name="description" content="Gestiona tus servicios de internet, voz, TV y enlaces dedicados corporativos con TelcoAndina.">
-  <title>Mi TelcoAndina | Portal de Clientes & Corporativo 2026</title>
+  <meta name="description" content="Gestiona tus servicios de internet, voz y TV desde un solo lugar con TelcoAndina.">
+  <title>Mi TelcoAndina | Tu conexión, en tus manos</title>
   <style>
     :root {
       color-scheme: light;
@@ -19,8 +19,6 @@
       --mint: #dff4ee;
       --lime: #d7f36a;
       --navy: #142c39;
-      --mrtg-green: #00cc00;
-      --mrtg-blue: #0000cc;
       --shadow: 0 18px 46px rgba(25, 50, 61, .08);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-synthesis: none;
@@ -44,9 +42,9 @@
     .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-size: 21px; font-weight: 800; letter-spacing: -.06em; text-decoration: none; }
     .brand-mark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 12px 12px 12px 4px; color: white; background: var(--teal); }
     .brand-mark .icon { width: 19px; height: 19px; }
-    .auth-main { width: min(100%, 410px); margin: auto; padding: 40px 0; }
+    .auth-main { width: min(100%, 410px); margin: auto; padding: 60px 0; }
     .auth-main h1 { margin: 11px 0 8px; font-size: clamp(28px, 3vw, 36px); letter-spacing: -.055em; line-height: 1.12; }
-    .auth-main > p { margin: 0 0 24px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .auth-main > p { margin: 0 0 30px; color: var(--muted); font-size: 14px; line-height: 1.65; }
     .field { display: grid; gap: 8px; margin: 17px 0; }
     .field label { font-size: 12px; font-weight: 750; }
     .field input, .field select {
@@ -67,8 +65,6 @@
     .btn-primary:hover { background: var(--teal-dark); }
     .btn-secondary { border-color: var(--line); color: var(--ink); background: white; }
     .btn-secondary:hover { border-color: #b7d7d2; }
-    .btn-corp { border-color: #3b82f6; color: #1e40af; background: #eff6ff; }
-    .btn-corp:hover { background: #dbeafe; }
     .btn-google { width: 100%; border-color: var(--line); color: var(--ink); background: white; }
     .btn-google:hover { border-color: #b7d7d2; background: #fbfcfc; }
     .google-mark { font-weight: 850; font-size: 17px; background: conic-gradient(from -45deg, #4285f4 0deg 90deg, #34a853 90deg 180deg, #fbbc05 180deg 270deg, #ea4335 270deg); color: transparent; background-clip: text; -webkit-background-clip: text; }
@@ -76,7 +72,7 @@
     .auth-notice { margin: 12px 0 0; padding: 11px 12px; border-radius: 9px; color: #235c54; background: #e8f5f2; font-size: 11px; line-height: 1.55; }
     .auth-notice code { padding: 2px 5px; border-radius: 4px; color: var(--navy); background: white; font-size: 13px; font-weight: 800; letter-spacing: .12em; }
     .btn-light { color: var(--navy); background: var(--lime); }
-    .auth-separator { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: #9aa8ad; font-size: 11px; }
+    .auth-separator { display: flex; align-items: center; gap: 12px; margin: 19px 0; color: #9aa8ad; font-size: 11px; }
     .auth-separator::before, .auth-separator::after { height: 1px; flex: 1; background: var(--line); content: ""; }
     .auth-switch { margin: 22px 0 0; text-align: center; color: var(--muted); font-size: 12px; }
     .auth-footer { margin-top: auto; color: #8a9aa0; font-size: 11px; }
@@ -99,21 +95,37 @@
     .art-card strong { font-size: 13px; }
     .art-card small { margin-top: 4px; color: #c3d3d5; font-size: 11px; }
 
+    @media (min-width: 741px) and (max-height: 850px) {
+      .auth-side { padding-top: 10px; padding-bottom: 6px; }
+      .auth-main { padding: 0; transform: translateY(-14px); }
+      .auth-main h1 { margin: 8px 0 5px; font-size: clamp(36px, 3.5vw, 42px); line-height: 1; }
+      .auth-main > p { margin-bottom: 8px; font-size: 16px; line-height: 1.4; }
+      .auth-main .field { gap: 4px; margin: 6px 0; }
+      .auth-main .field label { font-size: 14px; }
+      .auth-main .field input, .auth-main .field select { min-height: 46px; font-size: 16px; }
+      .auth-main .form-row { margin: 4px 0 6px; font-size: 14px; }
+      .auth-main .btn { min-height: 46px; font-size: 15px; }
+      .auth-main .auth-separator { margin: 5px 0; font-size: 13px; }
+      .auth-main .auth-alternatives { gap: 6px; }
+      .auth-main .auth-switch { margin-top: 5px; font-size: 14px; }
+      .auth-footer { font-size: 12px; }
+      .auth-art { min-height: 0; padding: clamp(24px, 3.5vh, 48px); }
+      .art-copy { margin-bottom: 48px; }
+      .art-copy h2 { margin: 10px 0; font-size: clamp(38px, 4.9vw, 62px); }
+      .art-copy p { font-size: 16px; line-height: 1.45; }
+      .art-card { padding: 12px; }
+    }
+
     /* Portal */
-    .app-shell { min-height: 100vh; display: grid; grid-template-columns: 254px minmax(0, 1fr); }
+    .app-shell { min-height: 100vh; display: grid; grid-template-columns: 248px minmax(0, 1fr); }
     .sidebar { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; padding: 26px 17px 17px; border-right: 1px solid var(--line); background: #fff; }
-    .sidebar .brand { padding: 0 10px 24px; }
-    .user-type-tag { display: inline-block; margin: -16px 10px 18px; padding: 3px 8px; border-radius: 6px; font-size: 10px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
-    .user-type-tag.res { background: #e8f5f2; color: var(--teal-dark); }
-    .user-type-tag.corp { background: #dbeafe; color: #1e40af; }
+    .sidebar .brand { padding: 0 10px 28px; }
     .nav-label { margin: 8px 10px 11px; color: #9aa8ad; font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
     .nav-menu { display: grid; gap: 5px; }
     .nav-item { width: 100%; display: flex; align-items: center; gap: 12px; padding: 12px 11px; border: 0; border-radius: 9px; color: #627780; background: transparent; text-align: left; font-size: 13px; font-weight: 650; }
     .nav-item .icon { width: 18px; height: 18px; }
     .nav-item:hover { color: var(--teal); background: #f3f8f7; }
     .nav-item.active { color: var(--teal-dark); background: #e8f5f2; }
-    .nav-item.corp-item:hover { color: #1d4ed8; background: #eff6ff; }
-    .nav-item.corp-item.active { color: #1e40af; background: #dbeafe; }
     .sidebar-spacer { flex: 1; }
     .support-card { margin: 14px 2px; padding: 15px; border-radius: 12px; background: #eff7f5; }
     .support-card strong { display: block; font-size: 12px; }
@@ -121,7 +133,6 @@
     .support-card button { padding: 0; border: 0; color: var(--teal); background: none; font-size: 11px; font-weight: 750; }
     .profile { display: flex; align-items: center; gap: 10px; padding: 14px 7px 2px; border-top: 1px solid var(--line); }
     .avatar { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; color: var(--teal-dark); background: var(--mint); font-size: 12px; font-weight: 800; }
-    .avatar.corp { background: #dbeafe; color: #1e40af; }
     .profile-copy { min-width: 0; flex: 1; }
     .profile-copy strong, .profile-copy span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .profile-copy strong { font-size: 11px; }
@@ -148,7 +159,6 @@
     .card-title { margin: 0; font-size: 14px; letter-spacing: -.02em; }
     .card-link { display: inline-flex; align-items: center; gap: 5px; padding: 0; border: 0; color: var(--teal); background: none; font-size: 11px; font-weight: 750; white-space: nowrap; }
     .internet-card { position: relative; min-height: 240px; overflow: hidden; padding: 25px; border: 0; color: white; background: var(--navy); }
-    .internet-card.corp-theme { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
     .internet-card::after { position: absolute; width: 280px; height: 280px; top: -115px; right: -20px; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; box-shadow: 0 0 0 35px rgba(255,255,255,.025), 0 0 0 70px rgba(255,255,255,.025); content: ""; }
     .internet-card > * { position: relative; z-index: 1; }
     .internet-top { display: flex; align-items: center; justify-content: space-between; }
@@ -163,18 +173,6 @@
     .wifi-mini { display: flex; align-items: center; gap: 8px; color: #c3d4d5; font-size: 11px; }
     .wifi-mini .icon { width: 16px; height: 16px; color: var(--lime); }
     .internet-card .btn { min-height: 36px; padding: 0 12px; font-size: 10px; }
-
-    /* Estilos MRTG Corporativo */
-    .mrtg-container { background: #fff; padding: 20px; border: 1px solid #ccc; border-radius: 8px; font-family: monospace, sans-serif; }
-    .mrtg-header { font-size: 22px; font-weight: bold; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 5px; }
-    .mrtg-section-title { font-size: 18px; font-weight: bold; margin: 25px 0 10px; }
-    .mrtg-graph-box { display: inline-block; background: #fff; border: 1px solid #666; padding: 8px; margin-right: 15px; margin-bottom: 15px; vertical-align: top; }
-    .mrtg-graph-title { font-size: 12px; font-weight: bold; margin-bottom: 6px; color: #000; }
-    .mrtg-canvas { background: #f0f0f0; border: 1px solid #888; width: 360px; height: 135px; position: relative; }
-    .mrtg-legend { display: flex; justify-content: space-between; font-size: 10px; color: #333; margin-top: 6px; }
-    .mrtg-green-box { display: inline-block; width: 10px; height: 10px; background: #00cc00; margin-right: 3px; }
-    .mrtg-blue-box { display: inline-block; width: 10px; height: 10px; background: #0000cc; margin-right: 3px; }
-
     .bill-card { min-height: 240px; display: flex; flex-direction: column; }
     .bill-card .card-header { margin-bottom: 10px; }
     .bill-label { color: var(--muted); font-size: 11px; }
@@ -290,7 +288,7 @@
     .wifi-network span { margin-top: 4px; color: var(--muted); font-size: 10px; }
     .wifi-form { max-width: 500px; }
     .wifi-form .btn { margin-top: 4px; }
-    .info-list { display: grid; }
+    .info-list { display: grid; gap: 0; }
     .info-row { display: flex; justify-content: space-between; gap: 14px; padding: 13px 0; border-top: 1px solid #edf1f2; font-size: 11px; }
     .info-row:first-child { border-top: 0; padding-top: 0; }
     .info-row span { color: var(--muted); }
@@ -327,8 +325,17 @@
     }
     @media (max-width: 740px) {
       .auth-shell { grid-template-columns: 1fr; }
-      .auth-side { min-height: 100vh; padding: 25px clamp(22px, 7vw, 48px); }
-      .auth-main { padding: 32px 0 25px; }
+      .auth-side { min-height: 100vh; min-height: 100svh; padding: 16px clamp(22px, 7vw, 48px) 10px; }
+      .auth-main { padding: 18px 0 12px; }
+      .auth-main h1 { font-size: 33px; }
+      .auth-main > p { margin-bottom: 13px; font-size: 15px; line-height: 1.5; }
+      .auth-main .field { gap: 5px; margin: 9px 0; }
+      .auth-main .field label { font-size: 13px; }
+      .auth-main .field input, .auth-main .field select { min-height: 46px; }
+      .auth-main .form-row { margin: 6px 0 10px; font-size: 13px; }
+      .auth-main .auth-separator { margin: 9px 0; font-size: 12px; }
+      .auth-main .auth-switch { margin-top: 10px; font-size: 13px; }
+      .auth-main .btn { min-height: 46px; }
       .auth-art { display: none; }
       .auth-footer { padding-top: 10px; }
       .app-shell { display: block; }
@@ -349,6 +356,30 @@
       .bill-card { min-height: 210px; }
       .settings-grid { grid-template-columns: 1fr; }
       .tools-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 740px) and (max-height: 760px) {
+      .auth-side { padding-top: 10px; padding-bottom: 4px; }
+      .auth-main { padding: 4px 0; }
+      .auth-main h1 { margin: 7px 0 5px; font-size: 31px; }
+      .auth-main > p { margin-bottom: 8px; font-size: 14px; }
+      .auth-main .field { margin: 6px 0; }
+      .auth-main .field input, .auth-main .field select { min-height: 44px; }
+      .auth-main .form-row { margin: 4px 0 6px; }
+      .auth-main .auth-separator { margin: 5px 0; }
+      .auth-main .auth-switch { margin-top: 6px; }
+      .auth-footer { padding-top: 4px; }
+    }
+    @media (max-width: 740px) and (max-height: 680px) {
+      .auth-side { padding-top: 6px; padding-bottom: 2px; }
+      .auth-main { padding: 0; }
+      .auth-main h1 { margin: 4px 0 3px; font-size: 29px; }
+      .auth-main > p { margin-bottom: 5px; }
+      .auth-main .field { margin: 4px 0; }
+      .auth-main .field input, .auth-main .field select { min-height: 42px; }
+      .auth-main .form-row { margin: 2px 0 4px; }
+      .auth-main .auth-separator { margin: 3px 0; }
+      .auth-main .auth-switch { margin-top: 3px; }
+      .auth-footer { padding-top: 2px; }
     }
     @media (max-width: 520px) {
       .page { padding-right: 16px; padding-left: 16px; }
@@ -401,8 +432,6 @@
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
     <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"/></symbol>
-    <symbol id="i-chart" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
   </svg>
 
   <main id="authView" class="auth-shell">
@@ -411,21 +440,16 @@
       <div class="auth-main">
         <span class="eyebrow" id="authEyebrow">Mi cuenta TelcoAndina</span>
         <h1 id="authTitle">Tu conexión,<br>en tus manos.</h1>
-        <p id="authDescription">Ingresa a tu cuenta para administrar tus servicios, revisar tus pagos y monitorear tus enlaces.</p>
-
-        <!-- PRIMERA OPCIÓN: CONTINUAR CON (Google, Código, Demos) -->
+        <p id="authDescription">Ingresa a tu cuenta para administrar tus servicios, revisar tus pagos y mucho más.</p>
         <div id="authAlternatives">
+          <div class="auth-separator">o continúa con</div>
           <div class="auth-alternatives">
             <button class="btn btn-google" type="button" id="googleLogin"><span class="google-mark" aria-hidden="true">G</span> Continuar con Google <span style="font-size:10px;color:var(--muted)">(demo)</span></button>
             <button class="btn btn-secondary" type="button" id="emailTokenLogin"><svg class="icon"><use href="#i-mail"/></svg> Ingresar con código al correo</button>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px; margin-top:4px;">
-              <button class="btn btn-secondary" type="button" id="demoLogin" style="font-size:11px; padding:0 8px;">Demo Residencial</button>
-              <button class="btn btn-corp" type="button" id="demoCorpLogin" style="font-size:11px; padding:0 8px;"><svg class="icon" style="width:14px;height:14px"><use href="#i-chart"/></svg> Demo Corporativo</button>
-            </div>
           </div>
-          <div class="auth-separator">o ingresa con tu contraseña</div>
+          <div class="auth-separator">o también puedes</div>
+          <button class="btn btn-secondary" type="button" id="demoLogin" style="width:100%">Explorar cuenta demo</button>
         </div>
-
         <form id="authForm">
           <div class="field hidden" id="nameField"><label for="fullName">Nombre completo</label><input id="fullName" name="name" autocomplete="name" placeholder="¿Cómo te llamas?"></div>
           <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nombre@correo.com" required></div>
@@ -435,22 +459,21 @@
           <div class="form-row" id="loginOptions"><label class="check"><input type="checkbox" name="remember"> Recuérdame</label><button type="button" class="text-button" data-auth-mode="recover">¿Olvidaste tu contraseña?</button></div>
           <button class="btn btn-primary" type="submit" id="authSubmit">Ingresar a mi cuenta <svg class="icon"><use href="#i-arrow"/></svg></button>
         </form>
-
         <p class="auth-switch" id="authSwitch">¿Aún no tienes una cuenta? <button type="button" class="text-button" data-auth-mode="register">Regístrate aquí</button></p>
       </div>
       <div class="auth-footer">© 2026 TelcoAndina Telecomunicaciones · <a href="mailto:privacidad@telcoandina.example" style="color:inherit">Privacidad</a></div>
     </section>
     <aside class="auth-art" aria-label="Conectividad TelcoAndina">
       <div class="art-glow"></div>
-      <div class="art-top"><span class="art-badge"><svg class="icon"><use href="#i-spark"/></svg> Conectados contigo 2026</span></div>
+      <div class="art-top"><span class="art-badge"><svg class="icon"><use href="#i-spark"/></svg> Conectados contigo</span></div>
       <div class="art-copy">
-        <span class="eyebrow" style="color:#d7f36a">Soluciones Residenciales y Corporativas</span>
+        <span class="eyebrow" style="color:#d7f36a">Todo TelcoAndina, en un solo lugar</span>
         <h2>Lo que necesitas.<br><span>Sin complicaciones.</span></h2>
-        <p>Internet de alta velocidad, enlaces dedicados MPLS y videoanalítica edge para tu hogar y tu empresa.</p>
+        <p>Internet, voz y entretenimiento conectados a tu vida. Administra todo de forma fácil, segura y a tu ritmo.</p>
       </div>
       <div class="art-card">
         <span class="art-card-icon"><svg class="icon"><use href="#i-wifi"/></svg></span>
-        <span><strong>Una experiencia más simple</strong><small>Monitoreo inteligente en tiempo real.</small></span>
+        <span><strong>Una experiencia más simple</strong><small>Tus servicios siempre a tu alcance.</small></span>
       </div>
     </aside>
   </main>
@@ -458,13 +481,18 @@
   <div id="appView" class="app-shell hidden">
     <aside class="sidebar">
       <a class="brand" href="#" aria-label="TelcoAndina inicio"><span class="brand-mark"><svg class="icon"><use href="#i-mark"/></svg></span>TelcoAndina</a>
-      <span class="user-type-tag res" id="userTypeTag">Cliente Residencial</span>
       <div class="nav-label">Menú principal</div>
-      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
-        <!-- Generado dinámicamente según tipo de usuario -->
+      <nav class="nav-menu" aria-label="Navegación principal">
+        <button class="nav-item active" data-page="overview"><svg class="icon"><use href="#i-home"/></svg>Resumen</button>
+        <button class="nav-item" data-page="services"><svg class="icon"><use href="#i-box"/></svg>Mis servicios</button>
+        <button class="nav-item" data-page="payments"><svg class="icon"><use href="#i-card"/></svg>Pagos y facturas</button>
+        <button class="nav-item" data-page="wifi"><svg class="icon"><use href="#i-wifi"/></svg>Mi Wi-Fi</button>
+        <button class="nav-item" data-page="plans"><svg class="icon"><use href="#i-grid"/></svg>Planes</button>
+        <button class="nav-item" data-page="tools"><svg class="icon"><use href="#i-spark"/></svg>Herramientas</button>
+        <button class="nav-item" data-page="credits"><svg class="icon"><use href="#i-help"/></svg>Créditos</button>
       </nav>
       <div class="sidebar-spacer"></div>
-      <div class="support-card" id="supportBox"><strong>¿Necesitas ayuda?</strong><p>Estamos para ayudarte cuando lo necesites.</p><button id="supportLink">Contactar soporte <span aria-hidden="true">↗</span></button></div>
+      <div class="support-card"><strong>¿Necesitas ayuda?</strong><p>Estamos para ayudarte cuando lo necesites.</p><button id="supportLink">Contactar soporte <span aria-hidden="true">↗</span></button></div>
       <div class="profile">
         <div class="avatar" id="profileAvatar">MC</div>
         <div class="profile-copy"><strong id="profileName">María Camila</strong><span id="profileEmail">maria@email.com</span></div>
@@ -475,7 +503,7 @@
       <header class="topbar">
         <div class="breadcrumb">Mi cuenta <span aria-hidden="true">/</span> <strong id="breadcrumbPage">Resumen</strong></div>
         <div class="topbar-right">
-          <div class="top-greeting"><b id="greetingName">Hola, María</b><span class="muted" id="greetingRole">Qué bueno tenerte de vuelta</span></div>
+          <div class="top-greeting"><b id="greetingName">Hola, María</b><span class="muted">Qué bueno tenerte de vuelta</span></div>
           <button class="icon-button" id="notificationButton" aria-label="Notificaciones"><svg class="icon"><use href="#i-bell"/></svg><span class="notification-dot"></span></button>
         </div>
       </header>
@@ -485,7 +513,7 @@
     <section class="chat-panel hidden" id="chatPanel" aria-label="Asistente virtual">
       <header class="chat-header"><div class="avatar">T</div><div class="chat-header-copy"><strong>Asistente TelcoAndina</strong><span>En línea · Respuestas automáticas</span></div><button class="chat-close" id="chatClose" aria-label="Cerrar chat"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></header>
       <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
-      <div class="chat-quick" id="chatQuickButtons"></div>
+      <div class="chat-quick"><button type="button" data-chat-prompt="¿Cómo cambio mi clave Wi-Fi?">Cambiar clave Wi-Fi</button><button type="button" data-chat-prompt="¿Cómo puedo pagar mi factura?">Pagar factura</button></div>
       <form class="chat-form" id="chatForm"><input id="chatInput" placeholder="Escribe tu consulta..." aria-label="Escribe tu consulta" autocomplete="off" required><button type="submit" aria-label="Enviar mensaje"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></form>
     </section>
   </div>
@@ -499,9 +527,7 @@
         { name: "Conecta+", speed: 600, price: 34900, tag: "Más elegido", features: ["Fibra óptica simétrica", "Wi-Fi 6 incluido", "Conecta hasta 15 dispositivos"] },
         { name: "Ultra", speed: 900, price: 47900, tag: "Máxima velocidad", features: ["Fibra óptica simétrica", "Wi-Fi 6 incluido", "Prioridad de soporte"] }
       ];
-
       const state = {
-        isCorporate: false,
         name: "María Camila Rodríguez",
         email: "maria@email.com",
         plan: "Conecta+",
@@ -509,20 +535,13 @@
         promoCycles: 0,
         paidBillAmount: null,
         wifiName: "HOGAR_RODRIGUEZ",
-        wifiPassword: "Telco2026!",
+        wifiPassword: "Telco2025!",
         billPaid: false,
         page: "overview",
         emailToken: "",
         emailTokenAddress: "",
-        emailTokenSent: false,
-        // Datos Corporativos (Almacenes Éxito)
-        corpAccount: "Almacenes Éxito S.A.",
-        corpSLA: "99.95% Garantizado",
-        corpBandwidth: "8 Gbps Dedicados (100 Sedes)",
-        corpNodes: 100,
-        corpBillAmount: 185000000
+        emailTokenSent: false
       };
-
       const authView = document.getElementById("authView");
       const appView = document.getElementById("appView");
       const pageContent = document.getElementById("pageContent");
@@ -531,11 +550,10 @@
       let toastTimer;
       let speedInterval;
       let chatInitialized = false;
-
       const money = value => "$" + new Intl.NumberFormat("es-CO").format(value);
       const icon = (name, cls = "icon") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${name}"></use></svg>`;
       const currentPlan = () => plans.find(plan => plan.name === state.plan) || plans[1];
-      const monthlyCharge = () => state.isCorporate ? state.corpBillAmount : (state.promoCycles > 0 ? Math.round(currentPlan().price * .8) : currentPlan().price);
+      const monthlyCharge = () => state.promoCycles > 0 ? Math.round(currentPlan().price * .8) : currentPlan().price;
       const displayName = () => state.name.trim().split(/\s+/)[0] || "Cliente";
       const safe = value => String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 
@@ -545,7 +563,6 @@
         clearTimeout(toastTimer);
         toastTimer = setTimeout(() => { root.innerHTML = ""; }, 3400);
       }
-
       function setAuthMode(mode) {
         authMode = mode;
         const register = mode === "register";
@@ -562,7 +579,7 @@
           ? "Crea tu cuenta para gestionar tus servicios TelcoAndina de forma fácil y segura."
           : recover ? "Ingresa el correo asociado a tu cuenta y te enviaremos los pasos para crear una nueva contraseña."
           : token ? "Te enviaremos un código de un solo uso para que ingreses sin contraseña."
-          : "Ingresa a tu cuenta para administrar tus servicios, revisar tus pagos y monitorear tus enlaces.";
+          : "Ingresa a tu cuenta para administrar tus servicios, revisar tus pagos y mucho más.";
         document.getElementById("nameField").classList.toggle("hidden", !register);
         document.getElementById("passwordField").classList.toggle("hidden", recover || token);
         document.getElementById("password").required = !recover && !token;
@@ -582,79 +599,23 @@
               ? `¿Prefieres tu contraseña? <button type="button" class="text-button" data-auth-mode="login">Volver a ingresar</button>`
             : `¿Aún no tienes una cuenta? <button type="button" class="text-button" data-auth-mode="register">Regístrate aquí</button>`;
       }
-
-      function enterApp(name, email, isCorp = false) {
-        state.isCorporate = isCorp;
-        if (isCorp) {
-          state.name = "Almacenes Éxito S.A.";
-          state.email = "telecom@exito.com.co";
-        } else {
-          if (name) state.name = name;
-          if (email) state.email = email;
-        }
-
+      function enterApp(name, email) {
+        if (name) state.name = name;
+        if (email) state.email = email;
         authView.classList.add("hidden");
         appView.classList.remove("hidden");
-
-        const tag = document.getElementById("userTypeTag");
-        const avatar = document.getElementById("profileAvatar");
-        if (state.isCorporate) {
-          tag.textContent = "Cliente Corporativo";
-          tag.className = "user-type-tag corp";
-          avatar.className = "avatar corp";
-          avatar.textContent = "EX";
-          document.getElementById("profileName").textContent = "Almacenes Éxito";
-          document.getElementById("profileEmail").textContent = state.email;
-          document.getElementById("greetingName").textContent = "Hola, Almacenes Éxito";
-          document.getElementById("greetingRole").textContent = "Cuenta Empresarial · SLA 99.95%";
-          document.getElementById("supportBox").innerHTML = `<strong>NOC Dedicado 24/7</strong><p>Atención directa para enlaces MPLS e infraestructura.</p><button onclick="alert('Llamando a soporte dedicado NOC: 01 8000 999 888')">Contactar Ingeniero NOC ↗</button>`;
-        } else {
-          tag.textContent = "Cliente Residencial";
-          tag.className = "user-type-tag res";
-          avatar.className = "avatar";
-          avatar.textContent = state.name.split(/\s+/).slice(0, 2).map(part => part[0]).join("").toUpperCase();
-          document.getElementById("profileName").textContent = state.name;
-          document.getElementById("profileEmail").textContent = state.email;
-          document.getElementById("greetingName").textContent = `Hola, ${displayName()}`;
-          document.getElementById("greetingRole").textContent = "Qué bueno tenerte de vuelta";
-          document.getElementById("supportBox").innerHTML = `<strong>¿Necesitas ayuda?</strong><p>Estamos para ayudarte cuando lo necesites.</p><button id="supportLink">Contactar soporte ↗</button>`;
-          document.getElementById("supportLink")?.addEventListener("click", () => openSupport());
-        }
-
-        buildNavigation();
-        renderPage("overview");
+        document.getElementById("profileName").textContent = state.name;
+        document.getElementById("profileEmail").textContent = state.email;
+        document.getElementById("profileAvatar").textContent = state.name.split(/\s+/).slice(0, 2).map(part => part[0]).join("").toUpperCase();
+        document.getElementById("greetingName").textContent = `Hola, ${displayName()}`;
+        renderPage(state.page);
       }
-
-      function buildNavigation() {
-        const menu = document.getElementById("navMenu");
-        if (state.isCorporate) {
-          menu.innerHTML = `
-            <button class="nav-item corp-item active" data-page="overview">${icon("home")}Resumen Corporativo</button>
-            <button class="nav-item corp-item" data-page="mrtg">${icon("chart")}Monitoreo MRTG</button>
-            <button class="nav-item corp-item" data-page="services">${icon("box")}Enlaces & SLAs</button>
-            <button class="nav-item corp-item" data-page="payments">${icon("card")}Facturación Corp</button>
-            <button class="nav-item corp-item" data-page="tools">${icon("spark")}Herramientas NOC</button>
-            <button class="nav-item corp-item" data-page="credits">${icon("help")}Créditos</button>
-          `;
-        } else {
-          menu.innerHTML = `
-            <button class="nav-item active" data-page="overview">${icon("home")}Resumen</button>
-            <button class="nav-item" data-page="services">${icon("box")}Mis servicios</button>
-            <button class="nav-item" data-page="payments">${icon("card")}Pagos y facturas</button>
-            <button class="nav-item" data-page="wifi">${icon("wifi")}Mi Wi-Fi</button>
-            <button class="nav-item" data-page="plans">${icon("grid")}Planes</button>
-            <button class="nav-item" data-page="tools">${icon("spark")}Herramientas</button>
-            <button class="nav-item" data-page="credits">${icon("help")}Créditos</button>
-          `;
-        }
-      }
-
       authForm.addEventListener("submit", event => {
         event.preventDefault();
         const data = new FormData(authForm);
         const email = String(data.get("email") || "").trim();
         if (authMode === "recover") {
-          toast(`Demo 2026: se simularía el envío de instrucciones a ${email}.`);
+          toast(`Demo: se simularía el envío de instrucciones a ${email}.`);
           return;
         }
         if (authMode === "token") {
@@ -672,7 +633,7 @@
             toast("El código no coincide. Revisa el código de prueba e inténtalo de nuevo.");
             return;
           }
-          enterApp(email === "maria@email.com" ? "María Camila Rodríguez" : email.split("@")[0].replace(/[._-]/g, " "), email, false);
+          enterApp(email === "maria@email.com" ? "María Camila Rodríguez" : email.split("@")[0].replace(/[._-]/g, " "), email);
           return;
         }
         if (authMode === "register") {
@@ -684,14 +645,11 @@
           toast("Tu registro fue creado. Ya puedes ingresar a Mi TelcoAndina.");
           return;
         }
-        enterApp(email === "maria@email.com" ? "María Camila Rodríguez" : email.split("@")[0].replace(/[._-]/g, " "), email, false);
+        enterApp(email === "maria@email.com" ? "María Camila Rodríguez" : email.split("@")[0].replace(/[._-]/g, " "), email);
       });
-
-      document.getElementById("demoLogin").addEventListener("click", () => enterApp("María Camila Rodríguez", "maria@email.com", false));
-      document.getElementById("demoCorpLogin").addEventListener("click", () => enterApp("Almacenes Éxito S.A.", "telecom@exito.com.co", true));
+      document.getElementById("demoLogin").addEventListener("click", () => enterApp());
       document.getElementById("emailTokenLogin").addEventListener("click", () => setAuthMode("token"));
       document.getElementById("googleLogin").addEventListener("click", openGoogleDemo);
-
       document.addEventListener("click", event => {
         const modeButton = event.target.closest("[data-auth-mode]");
         if (modeButton) { setAuthMode(modeButton.dataset.authMode); return; }
@@ -706,7 +664,6 @@
         const close = event.target.closest("[data-close-modal]");
         if (close) closeModal();
       });
-
       document.getElementById("chatLauncher").addEventListener("click", () => setChatOpen(true));
       document.getElementById("chatClose").addEventListener("click", () => setChatOpen(false));
       document.getElementById("chatForm").addEventListener("submit", event => {
@@ -715,7 +672,6 @@
         sendChatMessage(input.value);
         input.value = "";
       });
-
       document.getElementById("logoutButton").addEventListener("click", () => {
         appView.classList.add("hidden");
         authView.classList.remove("hidden");
@@ -723,282 +679,92 @@
         authForm.reset();
         toast("Cerraste sesión correctamente.");
       });
-
-      document.getElementById("notificationButton").addEventListener("click", () => {
-        if (state.isCorporate) {
-          toast("Atención NOC: Todos los 100 enlaces MPLS operando a nivel nacional dentro de SLA.");
-        } else {
-          toast(state.billPaid ? "No tienes notificaciones pendientes." : "Recuerda que tu factura vence el 15 de octubre de 2026.");
-        }
-      });
+      document.getElementById("supportLink").addEventListener("click", () => openSupport());
+      document.getElementById("notificationButton").addEventListener("click", () => toast(state.billPaid ? "No tienes notificaciones pendientes." : "Recuerda que tu factura vence el 15 de octubre."));
 
       function heading(eyebrow, title, description, extra = "") {
         return `<div class="page-heading"><div><span class="eyebrow">${eyebrow}</span><h1>${title}</h1><p>${description}</p></div>${extra}</div>`;
       }
-
       function billCard() {
         const paid = state.billPaid;
         const amount = paid && state.paidBillAmount !== null ? state.paidBillAmount : monthlyCharge();
         return `<article class="card bill-card">
-          <div class="card-header"><h2 class="card-title">${state.isCorporate ? "Facturación Corporativa Mensual" : "Tu próxima factura"}</h2><span class="status-pill ${paid ? "" : "pending"}">${icon(paid ? "check" : "clock")} ${paid ? "Pagada" : "Pendiente"}</span></div>
+          <div class="card-header"><h2 class="card-title">Tu próxima factura</h2><span class="status-pill ${paid ? "" : "pending"}">${icon(paid ? "check" : "clock")} ${paid ? "Pagada" : "Pendiente"}</span></div>
           <span class="bill-label">${paid ? "Total pagado" : "Total a pagar"}</span>
           <div class="bill-amount">${money(amount)}</div>
           <div class="bill-due">${paid ? "Pago registrado el día de hoy" : `Vence el <strong>15 de octubre, 2026</strong>`}</div>
           <button class="btn ${paid ? "btn-secondary" : "btn-primary"}" data-action="${paid ? "history" : "pay"}">${paid ? "Ver historial de pagos" : "Pagar factura"} ${icon("arrow")}</button>
-          <div class="bill-foot"><span>Factura #${state.isCorporate ? "CORP-2026-9901" : "TA-2026-0842"}</span><span>${state.isCorporate ? "Red MPLS + Videoanalítica" : "Internet hogar"}</span></div>
+          <div class="bill-foot"><span>Factura #TA-2026-0842</span><span>Internet hogar</span></div>
         </article>`;
       }
-
       function serviceRow(type, title, detail) {
         return `<div class="service-row"><span class="service-icon">${icon(type)}</span><div class="service-copy"><strong>${title}</strong><span>${detail}</span></div><span class="service-end">${icon("check")}</span></div>`;
       }
-
       function activityRow(type, title, subtitle, amount) {
         return `<div class="activity-row"><span class="activity-icon">${icon(type)}</span><div class="activity-copy"><strong>${title}</strong><span>${subtitle}</span></div><span class="activity-amount">${amount}</span></div>`;
       }
-
-      // --- RENDERS DE PÁGINAS ---
-
       function renderOverview() {
-        if (state.isCorporate) {
-          return `${heading("Infraestructura Corporativa", `Almacenes Éxito S.A.`, "Consola de control de infraestructura híbrida, enlaces dedicados y videoanalítica.", `<span class="date-pill">${icon("clock")} Red Monitoreada NOC 24/7</span>`)}
-            <div class="grid overview-grid">
-              <article class="card internet-card corp-theme">
-                <div class="internet-top"><span class="product-chip"><span class="status-dot"></span> Red Operativa 99.95%</span><span class="product-chip">Enterprise Edge</span></div>
-                <h2>Backbone & Videoanalítica Éxito</h2><div class="subline">100 Almacenes interconectados vía IPsec / MPLS</div>
-                <div class="speed-row"><span class="speed-value">8.0</span><span class="speed-unit">Gbps continuos de subida</span></div>
-                <div class="internet-bottom"><span class="wifi-mini">${icon("shield")} Inferencia Edge Local en 100 Nodos</span><button class="btn btn-light" data-page="mrtg">Ver Gráficas MRTG ${icon("arrow")}</button></div>
-              </article>
-              ${billCard()}
-            </div>
-            <div class="grid lower-grid">
-              <article class="card"><div class="card-header"><h2 class="card-title">Resumen de Enlaces Activos</h2><button class="card-link" data-page="services">Ver mapa ${icon("arrow")}</button></div><div class="service-list">
-                ${serviceRow("box", "Sede Central Medellín (HQ)", "1 Gbps Simétrico · Enlace Fibra Oscura - SLA 99.99%")}
-                ${serviceRow("wifi", "100 Almacenes Éxito Colombia", "Inferencia de Video Local (20-100 Cámaras/Sede) + VPN IPsec")}
-                ${serviceRow("spark", "Procesamiento Enterprise Edge GPU", "Gateway GPU de Inferencia Anti-Robo en Tiempo Real")}
-              </div></article>
-              <article class="card"><div class="card-header"><h2 class="card-title">Métricas de Conectividad NOC</h2></div><div class="info-list">
-                <div class="info-row"><span>Latencia Promedio WAN</span><strong style="color:var(--teal)">3.2 ms</strong></div>
-                <div class="info-row"><span>Pérdida de Paquetes</span><strong>0.00%</strong></div>
-                <div class="info-row"><span>Ingeniero NOC Asignado</span><strong>Ing. Miguel A. Villalba</strong></div>
-                <div class="info-row"><span>Último Respaldo BGP</span><strong>Hoy, 06:00 AM (2026)</strong></div>
-              </div></article>
-            </div>`;
-        } else {
-          const plan = currentPlan();
-          return `${heading("Tu hogar conectado", `¡Hola, ${safe(displayName())}!`, "Aquí tienes un resumen de tus servicios y tu cuenta.", `<span class="date-pill">${icon("clock")} Cuenta activa (2026)</span>`)}
-            <div class="grid overview-grid">
-              <article class="card internet-card">
-                <div class="internet-top"><span class="product-chip"><span class="status-dot"></span> Servicio activo</span><span class="product-chip">Internet hogar</span></div>
-                <h2>Fibra TelcoAndina ${safe(plan.name)}</h2><div class="subline">Tu internet está funcionando con normalidad</div>
-                <div class="speed-row"><span class="speed-value">${state.speed}</span><span class="speed-unit">Mbps simétricos</span></div>
-                <div class="internet-bottom"><span class="wifi-mini">${icon("wifi")} Red: ${safe(state.wifiName)}</span><button class="btn btn-light" data-action="wifi">Administrar Wi-Fi ${icon("arrow")}</button></div>
-              </article>
-              ${billCard()}
-            </div>
-            ${state.plan === "Ultra" ? "" : `<article class="promo-banner">
-              <div class="promo-copy"><span class="promo-badge">${icon("spark")} Oferta 2026 · 20% menos</span><h2>Más velocidad para todo lo que disfrutas</h2><p>Mejora a Ultra con 900 Mbps y aprovecha el descuento en tus primeras 3 facturas de 2026.</p><div class="promo-prices"><strong>${money(Math.round(plans[2].price * .8))}<small style="font-size:10px;font-weight:600"> / mes</small></strong><del>${money(plans[2].price)} / mes</del></div></div>
-              <div class="promo-action"><button class="btn btn-light" data-action="buy-upgrade">Activar oferta en 1 clic ${icon("arrow")}</button><small>Demostración · Sin cargos reales</small></div>
-            </article>`}
-            <div class="grid lower-grid">
-              <article class="card"><div class="card-header"><h2 class="card-title">Mis servicios</h2><button class="card-link" data-page="services">Ver todos ${icon("arrow")}</button></div><div class="service-list">
-                ${serviceRow("wifi", "Internet fibra óptica", `${state.speed} Mbps · ${plan.name}`)}
-                ${serviceRow("tv", "TelcoAndina TV", "60 canales · 2 dispositivos")}
-                ${serviceRow("phone", "Voz hogar", "Llamadas ilimitadas nacionales")}
-              </div></article>
-              <article class="card"><div class="card-header"><h2 class="card-title">Actividad reciente (2026)</h2><button class="card-link" data-page="payments">Ver movimientos ${icon("arrow")}</button></div><div class="activity">
-                ${state.billPaid ? activityRow("check", "Pago recibido", "Factura de octubre 2026 · Hoy", `-${money(state.paidBillAmount ?? monthlyCharge())}`) : activityRow("clock", "Factura disponible", "Factura de octubre 2026 · 1 oct 2026", money(monthlyCharge()))}
-                ${activityRow("box", `Plan ${safe(plan.name)}`, "Servicio de internet · 1 oct 2026", money(monthlyCharge()))}
-              </div></article>
-            </div>`;
-        }
-      }
-
-      // --- PÁGINA MRTG EXCLUSIVA CORPORATIVA (Basada en la imagen adjunta) ---
-      function renderMRTG() {
-        return `${heading("Monitoreo de Red Corporativo", "MRTG Index Page - TelcoAndina Core", "Monitoreo de tráfico en tiempo real e interfaces de Gateway y Enlaces Dedicados.")}
-          <div class="mrtg-container">
-            <div class="mrtg-header">MRTG Index Page - Almacenes Éxito Gateway</div>
-
-            <div class="mrtg-section-title">Interfaces of Cou-gateway</div>
-            <div style="display:flex; flex-wrap:wrap; gap:15px;">
-
-              <!-- Grafica 1: eth0 -- cou-gateway -->
-              <div class="mrtg-graph-box">
-                <div class="mrtg-graph-title">eth0 -- cou-gateway (Enlace Principal Medellín HQ)</div>
-                <div class="mrtg-canvas">
-                  <svg width="360" height="135" viewBox="0 0 360 135" style="background:#f4f4f4;">
-                    <!-- Grid Lines -->
-                    <line x1="0" y1="30" x2="360" y2="30" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <line x1="0" y1="60" x2="360" y2="60" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <line x1="0" y1="90" x2="360" y2="90" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <!-- Area Chart Green (Incoming) -->
-                    <polygon points="140,120 140,70 160,65 180,68 200,95 220,110 240,118 260,118 280,105 300,105 320,120 340,90 350,90 350,120" fill="#00cc00" stroke="#008800"/>
-                    <!-- Line Chart Blue (Outgoing) -->
-                    <polyline points="140,120 140,50 150,85 160,30 170,90 180,25 190,100 200,105 220,115 240,118 280,100 340,80 350,85" fill="none" stroke="#0000cc" stroke-width="1.5"/>
-                    <!-- Red Vertical Marker -->
-                    <line x1="120" y1="0" x2="120" y2="120" stroke="#cc0000" stroke-width="1"/>
-                    <line x1="280" y1="0" x2="280" y2="120" stroke="#cc0000" stroke-width="1"/>
-                    <!-- Axes Text -->
-                    <text x="2" y="25" font-size="8" fill="#333">14.4 k</text>
-                    <text x="2" y="55" font-size="8" fill="#333">10.8 k</text>
-                    <text x="2" y="85" font-size="8" fill="#333">7.2 k</text>
-                    <text x="2" y="115" font-size="8" fill="#333">0.0 k</text>
-                    <!-- X Axis Hours -->
-                    <text x="40" y="130" font-size="8" fill="#333">22 0 2 4 6 8 10 12 14 16 18 20 22 0 2 4 6</text>
-                  </svg>
-                </div>
-                <div class="mrtg-legend">
-                  <span><span class="mrtg-green-box"></span> In: 7.2 kb/s (50.0%)</span>
-                  <span><span class="mrtg-blue-box"></span> Out: 11.4 kb/s (72.1%)</span>
-                </div>
-              </div>
-
-              <!-- Grafica 2: eth1 -- cou-gateway -->
-              <div class="mrtg-graph-box">
-                <div class="mrtg-graph-title">eth1 -- cou-gateway (Enlace Secundario Backup)</div>
-                <div class="mrtg-canvas">
-                  <svg width="360" height="135" viewBox="0 0 360 135" style="background:#f4f4f4;">
-                    <line x1="0" y1="30" x2="360" y2="30" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <line x1="0" y1="60" x2="360" y2="60" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <line x1="0" y1="90" x2="360" y2="90" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <!-- Area Chart Green -->
-                    <polygon points="150,120 150,75 170,70 190,75 210,75 230,120 290,120 310,95 330,80 350,80 350,120" fill="#00cc00" stroke="#008800"/>
-                    <!-- Line Chart Blue -->
-                    <polyline points="150,120 150,60 160,40 170,80 180,35 190,50 200,90 210,80 310,90 330,60 350,70" fill="none" stroke="#0000cc" stroke-width="1.5"/>
-                    <line x1="100" y1="0" x2="100" y2="120" stroke="#cc0000" stroke-width="1"/>
-                    <line x1="270" y1="0" x2="270" y2="120" stroke="#cc0000" stroke-width="1"/>
-                    <text x="2" y="25" font-size="8" fill="#333">12.4 k</text>
-                    <text x="2" y="55" font-size="8" fill="#333">9.3 k</text>
-                    <text x="2" y="85" font-size="8" fill="#333">6.2 k</text>
-                    <text x="2" y="115" font-size="8" fill="#333">0.0 k</text>
-                    <text x="40" y="130" font-size="8" fill="#333">22 0 2 4 6 8 10 12 14 16 18 20 22 0 2 4 6</text>
-                  </svg>
-                </div>
-                <div class="mrtg-legend">
-                  <span><span class="mrtg-green-box"></span> In: 6.2 kb/s (41.0%)</span>
-                  <span><span class="mrtg-blue-box"></span> Out: 9.8 kb/s (60.0%)</span>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="mrtg-section-title">Interfaces of 7206_COU_01 (Core Router Videoanalítica 100 Sedes)</div>
-            <div style="display:flex; flex-wrap:wrap; gap:15px;">
-
-              <!-- Grafica 3: POS3/0 -->
-              <div class="mrtg-graph-box">
-                <div class="mrtg-graph-title">POS3/0 -- 7206_COU_01 (Tráfico Continuo Videoanalítica 8 Gbps)</div>
-                <div class="mrtg-canvas">
-                  <svg width="360" height="135" viewBox="0 0 360 135" style="background:#f4f4f4;">
-                    <line x1="0" y1="30" x2="360" y2="30" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <line x1="0" y1="60" x2="360" y2="60" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <line x1="0" y1="90" x2="360" y2="90" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <polygon points="140,120 140,40 340,40 340,120" fill="#00cc00" stroke="#008800"/>
-                    <polyline points="140,120 140,30 160,25 180,30 200,28 220,32 240,29 260,30 280,35 300,30 320,30 340,32" fill="none" stroke="#0000cc" stroke-width="1.5"/>
-                    <line x1="80" y1="0" x2="80" y2="120" stroke="#cc0000" stroke-width="1"/>
-                    <line x1="330" y1="0" x2="330" y2="120" stroke="#cc0000" stroke-width="1"/>
-                    <text x="2" y="25" font-size="8" fill="#333">2120.0</text>
-                    <text x="2" y="55" font-size="8" fill="#333">1590.0</text>
-                    <text x="2" y="85" font-size="8" fill="#333">1060.0</text>
-                    <text x="2" y="115" font-size="8" fill="#333">0.0</text>
-                    <text x="40" y="130" font-size="8" fill="#333">22 0 2 4 6 8 10 12 14 16 18 20 22 0 2 4 6</text>
-                  </svg>
-                </div>
-                <div class="mrtg-legend">
-                  <span><span class="mrtg-green-box"></span> Max In: 1650.0 kb/s</span>
-                  <span><span class="mrtg-blue-box"></span> Max Out: 2100.0 kb/s</span>
-                </div>
-              </div>
-
-              <!-- Grafica 4: POS4/0 -->
-              <div class="mrtg-graph-box">
-                <div class="mrtg-graph-title">POS4/0 -- 7206_COU_01 (Monitoreo de Latencia y Metadatos)</div>
-                <div class="mrtg-canvas">
-                  <svg width="360" height="135" viewBox="0 0 360 135" style="background:#f4f4f4;">
-                    <line x1="0" y1="30" x2="360" y2="30" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <line x1="0" y1="60" x2="360" y2="60" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <line x1="0" y1="90" x2="360" y2="90" stroke="#ccc" stroke-dasharray="2,2"/>
-                    <polygon points="140,120 140,95 340,95 340,120" fill="#00cc00" stroke="#008800"/>
-                    <polyline points="140,120 140,85 160,20 170,85 180,85 200,80 220,85 240,85 340,85" fill="none" stroke="#0000cc" stroke-width="1.5"/>
-                    <line x1="120" y1="0" x2="120" y2="120" stroke="#cc0000" stroke-width="1"/>
-                    <line x1="280" y1="0" x2="280" y2="120" stroke="#cc0000" stroke-width="1"/>
-                    <text x="2" y="25" font-size="8" fill="#333">680.0</text>
-                    <text x="2" y="55" font-size="8" fill="#333">510.0</text>
-                    <text x="2" y="85" font-size="8" fill="#333">170.0</text>
-                    <text x="2" y="115" font-size="8" fill="#333">0.0</text>
-                    <text x="40" y="130" font-size="8" fill="#333">22 0 2 4 6 8 10 12 14 16 18 20 22 0 2 4 6</text>
-                  </svg>
-                </div>
-                <div class="mrtg-legend">
-                  <span><span class="mrtg-green-box"></span> Avg In: 190.0 kb/s</span>
-                  <span><span class="mrtg-blue-box"></span> Peak Out: 610.0 kb/s</span>
-                </div>
-              </div>
-
-            </div>
-
-            <div style="margin-top:20px; font-size:11px; color:#555;">
-              <b>GREEN</b> ### Incoming Traffic in Bits per Second | <b>BLUE</b> ### Outgoing Traffic in Bits per Second<br>
-              <i>MRTG Index Page generated automatically by TelcoAndina NOC Monitoring Engine v2.6 (October 2026)</i>
-            </div>
+        const plan = currentPlan();
+        return `${heading("Tu hogar conectado", `¡Hola, ${safe(displayName())}!`, "Aquí tienes un resumen de tus servicios y tu cuenta.", `<span class="date-pill">${icon("clock")} Cuenta activa</span>`)}
+          <div class="grid overview-grid">
+            <article class="card internet-card">
+              <div class="internet-top"><span class="product-chip"><span class="status-dot"></span> Servicio activo</span><span class="product-chip">Internet hogar</span></div>
+              <h2>Fibra TelcoAndina ${safe(plan.name)}</h2><div class="subline">Tu internet está funcionando con normalidad</div>
+              <div class="speed-row"><span class="speed-value">${state.speed}</span><span class="speed-unit">Mbps simétricos</span></div>
+              <div class="internet-bottom"><span class="wifi-mini">${icon("wifi")} Red: ${safe(state.wifiName)}</span><button class="btn btn-light" data-action="wifi">Administrar Wi-Fi ${icon("arrow")}</button></div>
+            </article>
+            ${billCard()}
+          </div>
+          ${state.plan === "Ultra" ? "" : `<article class="promo-banner">
+            <div class="promo-copy"><span class="promo-badge">${icon("spark")} Oferta para ti · 20% menos</span><h2>Más velocidad para todo lo que disfrutas</h2><p>Mejora a Ultra con 900 Mbps y aprovecha el descuento en tus primeras 3 facturas.</p><div class="promo-prices"><strong>${money(Math.round(plans[2].price * .8))}<small style="font-size:10px;font-weight:600"> / mes</small></strong><del>${money(plans[2].price)} / mes</del></div></div>
+            <div class="promo-action"><button class="btn btn-light" data-action="buy-upgrade">Activar oferta en 1 clic ${icon("arrow")}</button><small>Demostración · Sin cargos reales</small></div>
+          </article>`}
+          <div class="grid lower-grid">
+            <article class="card"><div class="card-header"><h2 class="card-title">Mis servicios</h2><button class="card-link" data-page="services">Ver todos ${icon("arrow")}</button></div><div class="service-list">
+              ${serviceRow("wifi", "Internet fibra óptica", `${state.speed} Mbps · ${plan.name}`)}
+              ${serviceRow("tv", "TelcoAndina TV", "60 canales · 2 dispositivos")}
+              ${serviceRow("phone", "Voz hogar", "Llamadas ilimitadas nacionales")}
+            </div></article>
+            <article class="card"><div class="card-header"><h2 class="card-title">Actividad reciente</h2><button class="card-link" data-page="payments">Ver movimientos ${icon("arrow")}</button></div><div class="activity">
+              ${state.billPaid ? activityRow("check", "Pago recibido", "Factura de octubre · Hoy", `-${money(state.paidBillAmount ?? monthlyCharge())}`) : activityRow("clock", "Factura disponible", "Factura de octubre · 1 oct", money(monthlyCharge()))}
+              ${activityRow("box", `Plan ${safe(plan.name)}`, "Servicio de internet · 1 oct", money(monthlyCharge()))}
+            </div></article>
           </div>`;
       }
-
       function renderServices() {
-        if (state.isCorporate) {
-          return `${heading("SLA & Conectividad Corporativa", "Enlaces & Red MPLS", "Gestión de SLAs, direccionamiento IP estático y troncales SIP.", `<button class="btn btn-primary" onclick="alert('Generando informe de disponibilidad en PDF...')">Descargar Reporte SLA 2026</button>`)}
-            <div class="grid overview-grid">
-              <article class="card internet-card corp-theme">
-                <div class="internet-top"><span class="product-chip"><span class="status-dot"></span> SLA Cumplido</span><span class="product-chip">Contrato Corporativo</span></div>
-                <h2>Garantía de Servicio: 99.95%</h2><div class="subline">Sede Principal Medellín + 100 Almacenes Colombia</div>
-                <div class="speed-row"><span class="speed-value">1.0</span><span class="speed-unit">Gbps Fibra Oscura HQ</span></div>
-                <div class="internet-bottom"><span class="wifi-mini">${icon("check")} BGP Routing Activo · ASN 26210</span><button class="btn btn-light" data-page="mrtg">Ver MRTG ${icon("arrow")}</button></div>
-              </article>
-              <article class="card"><div class="card-header"><h2 class="card-title">Detalles del Contrato Corporativo</h2></div><div class="info-list">
-                <div class="info-row"><span>RUT / NIT</span><strong>890.900.108-1</strong></div>
-                <div class="info-row"><span>Segmento IP Asignado</span><strong>181.57.210.0/24 (Pública)</strong></div>
-                <div class="info-row"><span>Contrato N°</span><strong>CORP-2026-EXITO-01</strong></div>
-                <div class="info-row"><span>Vencimiento Contrato</span><strong>31 Dic, 2026</strong></div>
-              </div></article>
-            </div>`;
-        } else {
-          const plan = currentPlan();
-          return `${heading("Todo conectado", "Mis servicios", "Administra tus productos y encuentra opciones para ti.", `<button class="btn btn-primary" data-page="plans" style="width:auto">${icon("spark")} Explorar planes</button>`)}
-            <div class="grid overview-grid">
-              <article class="card internet-card">
-                <div class="internet-top"><span class="product-chip"><span class="status-dot"></span> Activo</span><span class="product-chip">Internet hogar</span></div>
-                <h2>Fibra TelcoAndina ${safe(plan.name)}</h2><div class="subline">Instalado en tu domicilio principal</div>
-                <div class="speed-row"><span class="speed-value">${state.speed}</span><span class="speed-unit">Mbps simétricos</span></div>
-                <div class="internet-bottom"><span class="wifi-mini">${icon("wifi")} ${safe(state.wifiName)}</span><button class="btn btn-light" data-action="wifi">Configurar Wi-Fi ${icon("arrow")}</button></div>
-              </article>
-              <article class="card"><div class="card-header"><h2 class="card-title">Detalles del servicio</h2></div><div class="info-list">
-                <div class="info-row"><span>Número de cuenta</span><strong>TA-008421</strong></div><div class="info-row"><span>Fecha de instalación</span><strong>12 jun, 2026</strong></div><div class="info-row"><span>Dirección</span><strong>Calle 85 # 12-40</strong></div><div class="info-row"><span>Estado</span><strong style="color:var(--teal)">Al día (2026)</strong></div>
-              </div></article>
-            </div>
-            <article class="card" style="margin-top:18px"><div class="card-header"><h2 class="card-title">Otros servicios incluidos</h2><span class="status-pill">${icon("check")} Activos</span></div><div class="service-list">
-              ${serviceRow("tv", "TelcoAndina TV esencial", "60 canales · Acceso desde 2 dispositivos")}
-              ${serviceRow("phone", "Voz hogar ilimitada", "Llamadas nacionales sin límite")}
-            </div></article>`;
-        }
+        const plan = currentPlan();
+        return `${heading("Todo conectado", "Mis servicios", "Administra tus productos y encuentra opciones para ti.", `<button class="btn btn-primary" data-page="plans" style="width:auto">${icon("spark")} Explorar planes</button>`)}
+          <div class="grid overview-grid">
+            <article class="card internet-card">
+              <div class="internet-top"><span class="product-chip"><span class="status-dot"></span> Activo</span><span class="product-chip">Internet hogar</span></div>
+              <h2>Fibra TelcoAndina ${safe(plan.name)}</h2><div class="subline">Instalado en tu domicilio principal</div>
+              <div class="speed-row"><span class="speed-value">${state.speed}</span><span class="speed-unit">Mbps simétricos</span></div>
+              <div class="internet-bottom"><span class="wifi-mini">${icon("wifi")} ${safe(state.wifiName)}</span><button class="btn btn-light" data-action="wifi">Configurar Wi-Fi ${icon("arrow")}</button></div>
+            </article>
+            <article class="card"><div class="card-header"><h2 class="card-title">Detalles del servicio</h2></div><div class="info-list">
+              <div class="info-row"><span>Número de cuenta</span><strong>TA-008421</strong></div><div class="info-row"><span>Fecha de instalación</span><strong>12 jun, 2024</strong></div><div class="info-row"><span>Dirección</span><strong>Calle 85 # 12-40</strong></div><div class="info-row"><span>Estado</span><strong style="color:var(--teal)">Al día</strong></div>
+            </div></article>
+          </div>
+          <article class="card" style="margin-top:18px"><div class="card-header"><h2 class="card-title">Otros servicios incluidos</h2><span class="status-pill">${icon("check")} Activos</span></div><div class="service-list">
+            ${serviceRow("tv", "TelcoAndina TV esencial", "60 canales · Acceso desde 2 dispositivos")}
+            ${serviceRow("phone", "Voz hogar ilimitada", "Llamadas nacionales sin límite")}
+          </div></article>`;
       }
-
       function renderPayments() {
-        return `${heading("Tu cuenta 2026", "Pagos y facturas", "Consulta tus cobros corporativos/residenciales y mantén tu cuenta al día.", `<button class="btn btn-secondary" data-action="download">${icon("card")} Descargar estado de cuenta 2026</button>`)}
+        return `${heading("Tu cuenta", "Pagos y facturas", "Consulta tus cobros y mantén tu cuenta al día.", `<button class="btn btn-secondary" data-action="download">${icon("card")} Descargar estado de cuenta</button>`)}
           <div class="grid overview-grid">
             ${billCard()}
-            <article class="card"><div class="card-header"><h2 class="card-title">Método de pago registrado</h2><span class="status-pill">${icon("check")} Preferido</span></div>
-              <div class="wifi-network"><span class="service-icon">${icon("card")}</span><div><strong>${state.isCorporate ? "Transferencia Bancaria ACH / Bancolombia" : "Visa terminada en 4242"}</strong><span>Vence 08/29 · ${state.isCorporate ? "Débito Automático Corp" : "Crédito"}</span></div></div>
+            <article class="card"><div class="card-header"><h2 class="card-title">Método de pago</h2><span class="status-pill">${icon("check")} Preferido</span></div>
+              <div class="wifi-network"><span class="service-icon">${icon("card")}</span><div><strong>Visa terminada en 4242</strong><span>Vence 08/28 · Crédito</span></div></div>
               <button class="card-link" data-action="payment-method" style="margin-top:17px">Administrar métodos de pago ${icon("arrow")}</button>
             </article>
           </div>
-          <article class="card" style="margin-top:18px"><div class="card-header"><h2 class="card-title">Historial de facturas 2026</h2><span class="muted" style="font-size:11px">Últimos movimientos del año 2026</span></div><div class="payment-list">
-            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("card")}</span><div class="payment-meta"><strong>Factura de octubre 2026</strong><span>${state.isCorporate ? "CORP-2026-9901" : "TA-2026-0842"} · 1 oct 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(state.billPaid && state.paidBillAmount !== null ? state.paidBillAmount : monthlyCharge())}</strong><span class="status-pill ${state.billPaid ? "" : "pending"}">${state.billPaid ? "Pagada" : "Pendiente"}</span></div></div>
-            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de septiembre 2026</strong><span>${state.isCorporate ? "CORP-2026-8801" : "TA-2026-0779"} · 1 sep 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(monthlyCharge())}</strong><span class="status-pill">Pagada</span></div></div>
-            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de agosto 2026</strong><span>${state.isCorporate ? "CORP-2026-7701" : "TA-2026-0691"} · 1 ago 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(monthlyCharge())}</strong><span class="status-pill">Pagada</span></div></div>
+          <article class="card" style="margin-top:18px"><div class="card-header"><h2 class="card-title">Historial de facturas</h2><span class="muted" style="font-size:11px">Últimos movimientos</span></div><div class="payment-list">
+            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("card")}</span><div class="payment-meta"><strong>Factura de octubre 2026</strong><span>TA-2026-0842 · 1 oct 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(state.billPaid && state.paidBillAmount !== null ? state.paidBillAmount : monthlyCharge())}</strong><span class="status-pill ${state.billPaid ? "" : "pending"}">${state.billPaid ? "Pagada" : "Pendiente"}</span></div></div>
+            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de septiembre 2026</strong><span>TA-2026-0779 · 1 sep 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill">Pagada</span></div></div>
+            <div class="payment-row"><div class="payment-left"><span class="service-icon">${icon("check")}</span><div class="payment-meta"><strong>Factura de agosto 2026</strong><span>TA-2026-0691 · 1 ago 2026</span></div></div><div style="display:flex;align-items:center;gap:14px"><strong style="font-size:12px">${money(34900)}</strong><span class="status-pill">Pagada</span></div></div>
           </div></article>`;
       }
-
       function renderWifi() {
         return `${heading("Tu red en casa", "Configura tu Wi-Fi", "Actualiza el nombre y la contraseña de tu red cuando quieras.")}
           <div class="grid settings-grid">
@@ -1015,45 +781,42 @@
             </div><div style="margin-top:17px;padding:13px;border-radius:10px;background:#f7f9f9;color:var(--muted);font-size:10px;line-height:1.6">Al cambiar tu contraseña, deberás volver a conectar tus dispositivos con la nueva clave.</div></article>
           </div>`;
       }
-
       function renderPlans() {
         const cards = plans.map((plan, index) => {
           const isCurrent = state.plan === plan.name;
           const displayedPrice = isCurrent ? monthlyCharge() : plan.price;
           return `<article class="plan-card ${isCurrent ? "current" : ""}">${isCurrent ? `<span class="plan-tag">Tu plan actual</span>` : `<span class="plan-tag">${plan.tag}</span>`}
-            <h3>${plan.name}</h3><div class="plan-speed">${plan.speed} <small>Mbps</small></div><div class="plan-price">${money(displayedPrice)} <small>/ mes</small></div>${isCurrent && state.promoCycles ? `<p class="field-help">Oferta activa 2026: ${state.promoCycles} factura${state.promoCycles === 1 ? "" : "s"} con 20% de descuento.</p>` : ""}
+            <h3>${plan.name}</h3><div class="plan-speed">${plan.speed} <small>Mbps</small></div><div class="plan-price">${money(displayedPrice)} <small>/ mes</small></div>${isCurrent && state.promoCycles ? `<p class="field-help">Oferta activa: ${state.promoCycles} factura${state.promoCycles === 1 ? "" : "s"} con 20% de descuento.</p>` : ""}
             <ul class="plan-features">${plan.features.map(feature => `<li>${icon("check")}${feature}</li>`).join("")}</ul>
             <button class="btn ${isCurrent ? "btn-secondary" : "btn-primary"}" ${isCurrent ? "disabled" : `data-plan="${index}"`}>${isCurrent ? "Plan contratado" : "Elegir este plan"}</button>
           </article>`;
         }).join("");
-        return `${heading("A tu medida 2026", "Planes de internet", "Elige la velocidad que acompaña tu forma de vivir.", `<span class="date-pill">${icon("check")} Sin cláusula de permanencia</span>`)}<div class="grid plans-grid">${cards}</div>`;
+        return `${heading("A tu medida", "Planes de internet", "Elige la velocidad que acompaña tu forma de vivir.", `<span class="date-pill">${icon("check")} Sin cláusula de permanencia</span>`)}<div class="grid plans-grid">${cards}</div>`;
       }
-
       function renderTools() {
-        return `${heading("Todo a tu alcance", state.isCorporate ? "Herramientas de Red NOC Corporativas" : "Herramientas", "Revisa tu conexión y encuentra ayuda cuando la necesites.")}
+        return `${heading("Todo a tu alcance", "Herramientas", "Revisa tu conexión y encuentra ayuda cuando la necesites.")}
           <div class="grid tools-grid">
             <article class="card speed-test-card">
-              <div class="card-header"><div><span class="eyebrow">Diagnóstico de red</span><h2 class="card-title" style="margin-top:6px">${state.isCorporate ? "Test de Rendimiento Troncal IPsec" : "Medidor de ancho de banda"}</h2></div><span class="service-icon">${icon("wifi")}</span></div>
+              <div class="card-header"><div><span class="eyebrow">Diagnóstico de red</span><h2 class="card-title" style="margin-top:6px">Medidor de ancho de banda</h2></div><span class="service-icon">${icon("wifi")}</span></div>
               <div class="speed-test-main">
                 <div class="speed-gauge" id="speedGauge"><div class="gauge-inner"><strong class="gauge-value" id="speedResult">--</strong><span class="gauge-unit">Mbps descarga</span></div></div>
                 <div class="speed-result-copy"><h3 id="speedStatus">¿Cómo está tu conexión?</h3><p id="speedDescription">Mide una estimación de velocidad y compárala con los Mbps de tu plan actual.</p></div>
               </div>
               <div class="speed-metrics">
-                <div class="speed-metric"><span class="service-icon">${icon("clock")}</span><div><span>Latencia WAN</span><strong id="speedPing">-- ms</strong></div></div>
+                <div class="speed-metric"><span class="service-icon">${icon("clock")}</span><div><span>Latencia</span><strong id="speedPing">-- ms</strong></div></div>
                 <div class="speed-metric"><span class="service-icon">${icon("arrow")}</span><div><span>Descarga</span><strong id="speedDown">-- Mbps</strong></div></div>
                 <div class="speed-metric"><span class="service-icon">${icon("arrow")}</span><div><span>Subida</span><strong id="speedUp">-- Mbps</strong></div></div>
               </div>
-              <button class="btn btn-primary" id="speedTestButton" data-action="speed-test">${icon("spark")} Iniciar prueba 2026</button>
-              <p class="demo-note">Herramienta demostrativa: genera una estimación local según la infraestructura contratada en 2026.</p>
+              <button class="btn btn-primary" id="speedTestButton" data-action="speed-test">${icon("spark")} Iniciar prueba</button>
+              <p class="demo-note">Herramienta demostrativa: genera una estimación local según tu plan. No transmite datos ni sustituye un test de velocidad real del proveedor.</p>
             </article>
             <article class="card">
-              <div class="card-header"><h2 class="card-title">Centro de ayuda & Soporte</h2><span class="status-pill">${icon("check")} Disponible</span></div>
-              <div class="tool-shortcut"><span class="service-icon">${icon("help")}</span><div><strong>Asistente virtual TelcoAndina</strong><p>Resuelve dudas de facturas, Wi-Fi, enlaces y soporte.</p><button type="button" id="openChatFromTools">Abrir asistente ${icon("arrow")}</button></div></div>
-              <div class="tool-shortcut"><span class="service-icon">${icon("phone")}</span><div><strong>${state.isCorporate ? "NOC Corporativo Directo" : "Atención al cliente"}</strong><p>${state.isCorporate ? "Ingeniería de Red 24/7." : "Habla con nuestro equipo de soporte."}</p><button type="button" data-action="support">Ver canales de atención ${icon("arrow")}</button></div></div>
+              <div class="card-header"><h2 class="card-title">Centro de ayuda</h2><span class="status-pill">${icon("check")} Disponible</span></div>
+              <div class="tool-shortcut"><span class="service-icon">${icon("help")}</span><div><strong>Asistente virtual TelcoAndina</strong><p>Resuelve dudas de facturas, Wi-Fi, planes y servicios desde el chat.</p><button type="button" id="openChatFromTools">Abrir asistente ${icon("arrow")}</button></div></div>
+              <div class="tool-shortcut"><span class="service-icon">${icon("phone")}</span><div><strong>Atención al cliente</strong><p>Habla con nuestro equipo de soporte todos los días.</p><button type="button" data-action="support">Ver canales de atención ${icon("arrow")}</button></div></div>
             </article>
           </div>`;
       }
-
       function renderCredits() {
         const people = ["Carmen Rosa Forero", "Freddy Belmonte", "Ferney Carvajal", "Edgar L. Hernandez", "Alexander Lisker", "Jose E. Montero", "Miguel A. Villalba"];
         return `${heading("Quiénes somos", "Créditos del proyecto", "Conoce al grupo que diseñó y desarrolló esta demostración.")}
@@ -1065,23 +828,13 @@
             <div class="credits-program"><strong>Formación</strong><span>Diplomado Cloud Computing, Arquitecturas Híbridas y Ciberseguridad Zero Trust - ETB - Bogotá Col. 2 oct 2026</span></div>
           </article>`;
       }
-
       function renderPage(page) {
         if (page !== "tools" && speedInterval) {
           clearInterval(speedInterval);
           speedInterval = undefined;
         }
         state.page = page;
-        const pages = {
-          overview: ["Resumen", renderOverview],
-          mrtg: ["Monitoreo MRTG", renderMRTG],
-          services: ["Mis servicios", renderServices],
-          payments: ["Pagos y facturas", renderPayments],
-          wifi: ["Mi Wi-Fi", renderWifi],
-          plans: ["Planes", renderPlans],
-          tools: ["Herramientas", renderTools],
-          credits: ["Créditos", renderCredits]
-        };
+        const pages = { overview: ["Resumen", renderOverview], services: ["Mis servicios", renderServices], payments: ["Pagos y facturas", renderPayments], wifi: ["Mi Wi-Fi", renderWifi], plans: ["Planes", renderPlans], tools: ["Herramientas", renderTools], credits: ["Créditos", renderCredits] };
         const selected = pages[page] || pages.overview;
         document.getElementById("breadcrumbPage").textContent = selected[0];
         document.querySelectorAll(".nav-item").forEach(item => item.classList.toggle("active", item.dataset.page === page));
@@ -1091,7 +844,6 @@
         const openChatButton = document.getElementById("openChatFromTools");
         if (openChatButton) openChatButton.addEventListener("click", () => setChatOpen(true));
       }
-
       function performAction(action) {
         if (action === "wifi") { renderPage("wifi"); return; }
         if (action === "pay") { openPaymentModal(); return; }
@@ -1101,15 +853,14 @@
           state.speed = 900;
           state.promoCycles = 3;
           renderPage("overview");
-          toast("¡Oferta 2026 activada! Ultra 900 Mbps tiene 20% de descuento en tus próximas 3 facturas. Demo sin cargos reales.");
+          toast("¡Oferta activada! Ultra 900 Mbps tiene 20% de descuento en tus próximas 3 facturas. Demo sin cargos reales.");
           return;
         }
         if (action === "speed-test") { startSpeedTest(); return; }
         if (action === "support") { openSupport(); return; }
-        if (action === "download") { toast("Tu estado de cuenta de 2026 está listo para descargar."); return; }
+        if (action === "download") { toast("Tu estado de cuenta está listo para descargar."); return; }
         if (action === "payment-method") { toast("Puedes administrar tus métodos de pago llamando al 01 8000 123 456."); return; }
       }
-
       function startSpeedTest() {
         if (speedInterval) return;
         const button = document.getElementById("speedTestButton");
@@ -1117,12 +868,12 @@
         const description = document.getElementById("speedDescription");
         const gauge = document.getElementById("speedGauge");
         if (!button || !status || !description || !gauge) return;
-        const phases = ["Buscando el mejor servidor TelcoAndina 2026...", "Midiendo descarga...", "Midiendo subida...", "Analizando enlace..."];
+        const phases = ["Buscando el mejor servidor...", "Midiendo descarga...", "Midiendo subida...", "Analizando conexión..."];
         let step = 0;
         button.disabled = true;
         button.textContent = "Midiendo conexión…";
         status.textContent = phases[0];
-        description.textContent = "Mantén esta ventana abierta mientras preparamos el resultado de prueba.";
+        description.textContent = "Mantén esta ventana abierta mientras preparamos el resultado.";
         gauge.style.setProperty("--gauge-progress", "18deg");
         speedInterval = setInterval(() => {
           step += 1;
@@ -1138,22 +889,20 @@
           }
           clearInterval(speedInterval);
           speedInterval = undefined;
-          const targetSpeed = state.isCorporate ? 1000 : state.speed;
-          const download = Math.max(1, Math.round(targetSpeed * (.88 + Math.random() * .11)));
+          const download = Math.max(1, Math.round(state.speed * (.88 + Math.random() * .11)));
           const upload = Math.max(1, Math.round(download * (.84 + Math.random() * .12)));
-          const ping = state.isCorporate ? Math.round(2 + Math.random() * 3) : Math.round(12 + Math.random() * 15);
+          const ping = Math.round(12 + Math.random() * 15);
           document.getElementById("speedResult").textContent = download;
           document.getElementById("speedPing").textContent = `${ping} ms`;
           document.getElementById("speedDown").textContent = `${download} Mbps`;
           document.getElementById("speedUp").textContent = `${upload} Mbps`;
-          status.textContent = download >= targetSpeed * .8 ? "Tu enlace corporativo va excelente" : "Prueba completada";
-          description.textContent = `La estimación está dentro de lo esperado para tu canal asignado en 2026.`;
-          gauge.style.setProperty("--gauge-progress", `${Math.min(330, Math.round(download / targetSpeed * 330))}deg`);
+          status.textContent = download >= state.speed * .8 ? "Tu conexión va muy bien" : "Prueba completada";
+          description.textContent = `La estimación está dentro de lo esperado para tu plan de ${state.speed} Mbps.`;
+          gauge.style.setProperty("--gauge-progress", `${Math.min(330, Math.round(download / state.speed * 330))}deg`);
           button.disabled = false;
           button.innerHTML = `${icon("spark")} Repetir prueba`;
         }, 850);
       }
-
       function setChatOpen(open) {
         const panel = document.getElementById("chatPanel");
         const launcher = document.getElementById("chatLauncher");
@@ -1161,12 +910,11 @@
         launcher.classList.toggle("hidden", open);
         launcher.setAttribute("aria-expanded", String(open));
         if (open && !chatInitialized) {
-          addChatMessage("bot", `¡Hola, ${state.isCorporate ? 'Almacenes Éxito' : displayName()}! Soy el asistente virtual de TelcoAndina (Versión 2026). ¿En qué puedo ayudarte hoy?`);
+          addChatMessage("bot", `¡Hola, ${displayName()}! Soy el asistente virtual de TelcoAndina. ¿En qué puedo ayudarte hoy?`);
           chatInitialized = true;
         }
         if (open) document.getElementById("chatInput").focus();
       }
-
       function addChatMessage(sender, message) {
         const list = document.getElementById("chatMessages");
         const item = document.createElement("div");
@@ -1175,7 +923,6 @@
         list.appendChild(item);
         list.scrollTop = list.scrollHeight;
       }
-
       function sendChatMessage(message) {
         const text = String(message || "").trim();
         if (!text) return;
@@ -1183,45 +930,50 @@
         addChatMessage("user", text);
         const query = text.toLocaleLowerCase("es");
         let answer;
-        if (/mrtg|monitoreo|grafica|enlace|latencia/.test(query)) {
-          answer = state.isCorporate ? "Puedes consultar el estado en tiempo real de tus interfaces MRTG y enlaces dedicados en el menú «Monitoreo MRTG»." : "Para monitoreo corporativo MRTG ingresa con una cuenta de cliente corporativo.";
-          if (state.isCorporate) renderPage("mrtg");
-        } else if (/wifi|wi-fi|clave|contraseñ/.test(query)) {
-          answer = "Puedes actualizar el nombre o la contraseña desde «Mi Wi-Fi» en el menú. Recuerda usar al menos 8 caracteres.";
-          if (!state.isCorporate) renderPage("wifi");
+        if (/wifi|wi-fi|clave|contraseñ/.test(query)) {
+          answer = "Puedes actualizar el nombre o la contraseña desde «Mi Wi-Fi» en el menú. Recuerda usar al menos 8 caracteres para tu nueva clave.";
+          renderPage("wifi");
         } else if (/factura|pago|pagar|cobro/.test(query)) {
-          answer = state.billPaid ? "Tu factura de este mes de 2026 ya aparece pagada." : `Tu factura pendiente vence el 15 de octubre de 2026. Puedes pagarla en «Pagos y facturas».`;
+          answer = state.billPaid ? "Tu factura de este mes ya aparece pagada. Puedes consultar tus movimientos en «Pagos y facturas»." : "Tu factura pendiente es de $34.900 y vence el 15 de octubre. Puedes pagarla en «Pagos y facturas».";
           renderPage("payments");
+        } else if (/velocidad|test|ancho de banda|conexi[oó]n lenta/.test(query)) {
+          answer = "Abre «Herramientas» y toca «Iniciar prueba» para ver una estimación de tu conexión.";
+          renderPage("tools");
+        } else if (/plan|mejorar|contratar/.test(query)) {
+          answer = `Tu plan actual es ${state.plan} de ${state.speed} Mbps. En «Planes» puedes comparar opciones y elegir otro plan.`;
+          renderPage("plans");
+        } else if (/televisi[oó]n|telcoandina tv|canal|voz|tel[eé]fono/.test(query)) {
+          answer = "Tu cuenta incluye TelcoAndina TV esencial con 60 canales y voz hogar con llamadas nacionales. Revisa el detalle en «Mis servicios».";
+          renderPage("services");
+        } else if (/persona|asesor|soporte|ayuda humana/.test(query)) {
+          answer = "Claro, aquí tienes nuestros canales y horarios de atención.";
+          openSupport();
         } else {
-          answer = "Puedo ayudarte con pagos, facturas de 2026, monitoreo de red MRTG, planes y servicios.";
+          answer = "Puedo ayudarte con pagos, facturas, cambio de clave Wi-Fi, planes y servicios. Escribe una consulta o elige uno de los accesos rápidos.";
         }
         window.setTimeout(() => addChatMessage("bot", answer), 250);
       }
-
       function modal(title, description, content, actions) {
-        document.getElementById("modalRoot").innerHTML = `<div class="modal-backdrop" data-close-modal><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><div><span class="eyebrow">Mi cuenta TelcoAndina 2026</span><h2 id="modalTitle">${title}</h2><p>${description}</p></div><button class="modal-close" type="button" data-close-modal aria-label="Cerrar">${icon("check")}</button></div>${content}${actions}</section></div>`;
+        document.getElementById("modalRoot").innerHTML = `<div class="modal-backdrop" data-close-modal><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><div><span class="eyebrow">Mi cuenta TelcoAndina</span><h2 id="modalTitle">${title}</h2><p>${description}</p></div><button class="modal-close" type="button" data-close-modal aria-label="Cerrar">${icon("check")}</button></div>${content}${actions}</section></div>`;
       }
-
       function closeModal() { document.getElementById("modalRoot").innerHTML = ""; }
-
       function openGoogleDemo() {
-        modal("Continuar con Google", "Flujo de autenticación representativo para la demostración 2026.",
-          `<div class="wifi-network"><span class="avatar" style="width:42px;height:42px;background:white;color:#4285f4;font-size:17px">G</span><div><strong>María Camila Rodríguez</strong><span>maria@gmail.com · cuenta de demostración 2026</span></div></div>
-           <p class="demo-note">Esta vista simula OAuth2 con Google Cloud Identity. Para producción se configuran las credenciales del proveedor.</p>`,
+        modal("Continuar con Google", "Flujo de autenticación representativo para la demostración.",
+          `<div class="wifi-network"><span class="avatar" style="width:42px;height:42px;background:white;color:#4285f4;font-size:17px">G</span><div><strong>María Camila Rodríguez</strong><span>maria@gmail.com · cuenta de demostración</span></div></div>
+           <p class="demo-note">Esta vista no se conecta con Google ni comparte datos. Para producción se requiere configurar OAuth con las credenciales y redirecciones del proveedor.</p>`,
           `<div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" style="width:auto" id="confirmGoogle">Continuar como María</button></div>`);
         document.getElementById("confirmGoogle").addEventListener("click", () => {
           closeModal();
-          enterApp("María Camila Rodríguez", "maria@gmail.com", false);
-          toast("Acceso de Google simulado correctamente para 2026.");
+          enterApp("María Camila Rodríguez", "maria@gmail.com");
+          toast("Acceso de Google simulado para la cuenta demo.");
         });
       }
-
       function openPaymentModal() {
         const amount = monthlyCharge();
-        modal("Confirma tu pago 2026", "Revisa los datos de tu factura antes de continuar.",
-          `<div class="modal-summary"><span>Factura ${state.isCorporate ? 'CORP-2026-9901' : 'TA-2026-0842'}<br><span class="muted">${state.isCorporate ? 'Enlace Corporativo' : 'Internet hogar'} · vence 15 oct 2026</span></span><strong>${money(amount)}</strong></div>
-           <div class="field"><label for="paymentMethod">Pagar con</label><select id="paymentMethod"><option>${state.isCorporate ? 'Transferencia Bancaria ACH (Bancolombia)' : 'Visa terminada en 4242'}</option><option>Agregar otro método de pago</option></select></div>
-           <div class="field"><label class="check"><input id="termsPayment" type="checkbox" checked> Acepto el procesamiento de este pago en 2026</label></div>`,
+        modal("Confirma tu pago", "Revisa los datos de tu factura antes de continuar.",
+          `<div class="modal-summary"><span>Factura TA-2026-0842<br><span class="muted">Internet hogar · vence 15 oct</span></span><strong>${money(amount)}</strong></div>
+           <div class="field"><label for="paymentMethod">Pagar con</label><select id="paymentMethod"><option>Visa terminada en 4242</option><option>Agregar otro método de pago</option></select></div>
+           <div class="field"><label class="check"><input id="termsPayment" type="checkbox" checked> Acepto el procesamiento de este pago</label></div>`,
           `<div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" style="width:auto" id="confirmPayment">Pagar ${money(amount)}</button></div>`);
         document.getElementById("confirmPayment").addEventListener("click", () => {
           if (!document.getElementById("termsPayment").checked) { toast("Acepta el procesamiento para continuar."); return; }
@@ -1230,17 +982,19 @@
           if (state.promoCycles > 0) state.promoCycles -= 1;
           closeModal();
           renderPage(state.page);
-          toast("¡Pago realizado con éxito! Tu factura de 2026 quedó al día.");
+          toast(state.promoCycles === 0 && state.paidBillAmount !== currentPlan().price
+            ? "¡Pago realizado! Tu descuento promocional terminó; la próxima factura tendrá tarifa regular."
+            : "¡Pago realizado! Tu factura quedó al día.");
         });
       }
-
       function openPlanModal(index) {
         const plan = plans[Number(index)];
         if (!plan) return;
         const difference = plan.price - currentPlan().price;
         modal(`Cambiar a ${plan.name}`, "Tu nuevo plan estará activo al confirmar el cambio.",
-          `<div class="modal-summary"><span>${plan.speed} Mbps simétricos<br><span class="muted">Fibra óptica · mensual 2026</span></span><strong>${money(plan.price)}<small class="muted"> / mes</small></strong></div>
-           <div class="info-row"><span>${difference >= 0 ? "Diferencia mensual" : "Ahorro mensual"}</span><strong>${difference === 0 ? "Sin cambio" : money(Math.abs(difference))}</strong></div>`,
+          `<div class="modal-summary"><span>${plan.speed} Mbps simétricos<br><span class="muted">Fibra óptica · mensual</span></span><strong>${money(plan.price)}<small class="muted"> / mes</small></strong></div>
+           <div class="info-row"><span>${difference >= 0 ? "Diferencia mensual" : "Ahorro mensual"}</span><strong>${difference === 0 ? "Sin cambio" : money(Math.abs(difference))}</strong></div>
+           <p class="muted" style="font-size:10px;line-height:1.6">El cambio de plan es simulado y no generará cobros reales en esta demostración.</p>`,
           `<div class="modal-actions"><button class="btn btn-secondary" type="button" data-close-modal>Ahora no</button><button class="btn btn-primary" style="width:auto" id="confirmPlan">Confirmar cambio</button></div>`);
         document.getElementById("confirmPlan").addEventListener("click", () => {
           state.plan = plan.name;
@@ -1248,10 +1002,9 @@
           state.promoCycles = 0;
           closeModal();
           renderPage("overview");
-          toast(`¡Listo! Ahora tienes el plan ${plan.name} para 2026.`);
+          toast(`¡Listo! Ahora tienes el plan ${plan.name}.`);
         });
       }
-
       function saveWifi(event) {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -1262,12 +1015,11 @@
         state.wifiName = name;
         if (password) state.wifiPassword = password;
         renderPage("wifi");
-        toast("Los datos de tu red Wi-Fi se actualizaron correctamente para 2026.");
+        toast("Los datos de tu red Wi-Fi se actualizaron correctamente.");
       }
-
       function openSupport() {
-        modal("Estamos para ayudarte 2026", "Nuestro equipo de atención está disponible para ti.",
-          `<div class="info-list"><div class="info-row"><span>Línea gratuita</span><strong>01 8000 123 456</strong></div><div class="info-row"><span>NOC Corporativo</span><strong>01 8000 999 888</strong></div><div class="info-row"><span>Horario</span><strong>24/7 · Todos los días de 2026</strong></div></div>`,
+        modal("Estamos para ayudarte", "Nuestro equipo de atención está disponible para ti.",
+          `<div class="info-list"><div class="info-row"><span>Línea gratuita</span><strong>01 8000 123 456</strong></div><div class="info-row"><span>WhatsApp</span><strong>+57 300 555 0101</strong></div><div class="info-row"><span>Horario</span><strong>Todos los días · 7 a. m. – 10 p. m.</strong></div></div>`,
           `<div class="modal-actions"><button class="btn btn-primary" style="width:auto" type="button" data-close-modal>Entendido</button></div>`);
       }
     })();
